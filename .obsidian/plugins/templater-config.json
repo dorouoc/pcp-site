@@ -1,0 +1,33 @@
+{
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "templates_folder": "00 - Meta/Templates",
+  "enable_system_commands": false,
+  "syntax_highlighting": true,
+  "enabled_templates_hotkeys": [
+    {
+      "name": "Template-Literature-Note-Paper",
+      "hotkey": []
+    },
+    {
+      "name": "Template-Permanent-Note",
+      "hotkey": []
+    },
+    {
+      "name": "Template-Experiment-Note",
+      "hotkey": []
+    },
+    {
+      "name": "Template-Prompt-Note",
+      "hotkey": []
+    },
+    {
+      "name": "Template-Daily-Review",
+      "hotkey": []
+    },
+    {
+      "name": "Template-Weekly-Review",
+      "hotkey": []
+    }
+  ]
+}

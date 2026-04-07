@@ -1,0 +1,44 @@
+# PUMA Vault — .gitignore
+# ========================
+
+# ── Obsidian internal (keep .obsidian/ for settings sync) ──
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json   # plugin data (often has paths)
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Large attachments (manage separately) ──
+# Uncomment if PDFs are too large for GitHub (>100MB limit)
+# 00 - Meta/Attachments/*.pdf
+# 00 - Meta/Attachments/*.png
+# 00 - Meta/Attachments/*.jpg
+
+# ── Temporary files ──
+*.tmp
+*.bak
+*~
+
+# ── Python / code artefacts (if any code ends up here) ──
+__pycache__/
+*.pyc
+.env
+.venv/
+
+# ── Zotero library export (regenerate from Zotero, don't track) ──
+# 00 - Meta/zotero-library.json   # uncomment if file is large
+
+# ── Private notes (if you create them) ──
+# **/Private/**
+# **/private/**
+
+# ── Node modules (if any JS tooling added) ──
+node_modules/
+
+# ── Editor configs ──
+.vscode/
+.idea/
