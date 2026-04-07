@@ -2,7 +2,7 @@
 id: "EX-{{ModelName}}-{{Strategy}}-{{Task}}"
 title: "Experiment: {{Model}} × {{Strategy}} × {{Task}}"
 type: experiment
-tags: [experiment, {{task}}, {{model}}, {{strategy}}]
+tags: [experiment, "{{task}}", "{{model}}", "{{strategy}}"]
 stage: "{{1-triage | 2-estimation | 3-backlog}}"
 model: "{{llama3.2-8b | mistral-7b | phi-3.5-mini}}"
 strategy: "{{zero-shot | few-shot-3 | few-shot-6 | cot}}"
@@ -10,9 +10,9 @@ dataset: "{{jira-sr | tawos}}"
 seed: 42
 temperature: 0
 status: "{{planned | running | completed | failed}}"
-created: {{date}}
-updated: {{date}}
-run_date: {{date}}
+created: "{{date}}"
+updated: "{{date}}"
+run_date: "{{date}}"
 ---
 
 # Experiment: {{Model}} × {{Strategy}} × {{Task}}

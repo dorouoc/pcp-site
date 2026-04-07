@@ -3,8 +3,8 @@ id: "FL-{{date}}-{{keyword}}"
 title: "Fleeting Note — {{date}} — {{keyword}}"
 type: fleeting-note
 tags: [fleeting, inbox, to-process]
-created: {{date}}
-process_by: {{date+2days}}
+created: "{{date}}"
+process_by: "{{date+2days}}"
 source: "{{where this came from: paper/conversation/idea/podcast}}"
 ---
 

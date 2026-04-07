@@ -3,9 +3,9 @@ id: "{{LN-AuthorYear-Keyword}}"
 title: "{{Full paper title}}"
 type: literature-note
 subtype: paper
-tags: [literature, paper, {{topic-tags}}]
-authors: ["{{Author1 LastName, FirstName}}", "{{Author2}}"]
-year: {{YYYY}}
+tags: [literature, paper, "{{topic-tags}}"]
+authors: ["{{Author1 LastName FirstName}}", "{{Author2}}"]
+year: "{{YYYY}}"
 venue: "{{Conference/Journal name}}"
 doi: "{{DOI or arXiv ID}}"
 url: "{{URL}}"
@@ -20,8 +20,8 @@ puma_relevance: "{{Why this matters for PUMA}}"
 read_status: unread  # unread | reading | read | processed
 prisma_decision: include  # include | exclude | pending
 exclusion_reason: ""
-created: {{date}}
-updated: {{date}}
+created: "{{date}}"
+updated: "{{date}}"
 ---
 
 # {{Full Paper Title}}

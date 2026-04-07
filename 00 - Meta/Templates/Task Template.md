@@ -1,9 +1,9 @@
 ---
-Title: {{title}}
-Author: Shuvangkar Das
-Date: {{date:YYYY-MM-DD}}
-Type: Task-Note
-Alias: 
+title: "{{title}}"
+author: Shuvangkar Das
+date: "{{date:YYYY-MM-DD}}"
+type: Task-Note
+alias: 
 ---
 ___
 

@@ -3,16 +3,16 @@ id: "LN-Video-{{Channel}}-{{Keyword}}"
 title: "Video: {{Title}}"
 type: literature-note
 subtype: video
-tags: [literature, video, youtube, {{topic}}]
+tags: [literature, video, youtube, "{{topic}}"]
 author: "{{Creator name}}"
 channel: "{{Channel name}}"
 url: "{{YouTube/Vimeo URL}}"
-year: {{YYYY}}
+year: "{{YYYY}}"
 duration: "{{Hh Mm}}"
 playlist: "{{Playlist name if applicable}}"
 puma_relevance: "{{Why relevant to PUMA}}"
 watched_status: unwatched  # unwatched | partial | complete
-created: {{date}}
+created: "{{date}}"
 ---
 
 # Video: {{Title}}

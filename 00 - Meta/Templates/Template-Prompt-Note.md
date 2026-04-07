@@ -2,7 +2,7 @@
 id: "PT-{{Tool}}-{{UseCase}}"
 title: "Prompt: {{Tool}} — {{Use Case}}"
 type: prompt-template
-tags: [prompt, {{tool}}, {{methodology}}, {{use-case}}]
+tags: [prompt, "{{tool}}", "{{methodology}}", "{{use-case}}"]
 tool: "{{claude | chatgpt | perplexity | deepseek | gemini | ollama | cursor | copilot}}"
 methodology: "{{rcoif | cot | few-shot | egi | ami | drca | iipr | zero-shot}}"
 use_case: "{{research | coding | analysis | writing | experiment}}"
@@ -10,8 +10,8 @@ phase: "{{F0 | F1 | F2 | F3 | F4 | F5}}"
 version: 1.0
 tested: false
 effectiveness: null  # null | low | medium | high
-created: {{date}}
-updated: {{date}}
+created: "{{date}}"
+updated: "{{date}}"
 ---
 
 # Prompt: {{Tool}} — {{Use Case}}

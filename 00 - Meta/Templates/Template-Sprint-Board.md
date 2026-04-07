@@ -2,13 +2,13 @@
 id: ""
 title: "Sprint {{sprint-number}} — {{pec}}"
 type: sprint-board
-sprint: {{sprint-number}}
+sprint: "{{sprint-number}}"
 pec: ""
-start-date: {{date}}
+start-date: "{{date}}"
 end-date: ""
 goal: ""
 tags: [sprint, kanban, gtd, agile]
-created: {{date}}
+created: "{{date}}"
 ---
 
 # 🏃 Sprint {{sprint-number}} — {{pec}}

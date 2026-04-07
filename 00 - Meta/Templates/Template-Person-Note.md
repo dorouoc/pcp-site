@@ -7,7 +7,7 @@ affiliation: ""
 field: ""
 known-for: ""
 tags: [person-note]
-created: {{date}}
+created: "{{date}}"
 ---
 
 # PER: {{full-name}}

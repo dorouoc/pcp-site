@@ -3,9 +3,9 @@ id: "LN-{{AuthorYear}}-{{Keyword}}"
 title: "{{Book Title}}"
 type: literature-note
 subtype: book
-tags: [literature, book, {{topic}}]
-authors: ["{{Author LastName, FirstName}}"]
-year: {{YYYY}}
+tags: [literature, book, "{{topic}}"]
+authors: ["{{Author LastName FirstName}}"]
+year: "{{YYYY}}"
 publisher: "{{Publisher}}"
 isbn: "{{ISBN}}"
 url: "{{URL or goodreads}}"
@@ -13,8 +13,8 @@ zotero_key: "{{key}}"
 chapters_read: []
 puma_relevance: "{{Why relevant to PUMA}}"
 read_status: unread  # unread | reading | read | processed
-created: {{date}}
-updated: {{date}}
+created: "{{date}}"
+updated: "{{date}}"
 ---
 
 # {{Book Title}}

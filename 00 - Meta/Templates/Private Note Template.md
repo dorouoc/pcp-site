@@ -1,7 +1,7 @@
 ---
-title: {{title}}
+title: "{{title}}"
 author: Your Name
-date: {{date:YYYY-MM-DD}}, {{time:HH:mm}}
+date: "{{date:YYYY-MM-DD}} {{time:HH:mm}}"
 tags: [private]
 aliases: []
 ---

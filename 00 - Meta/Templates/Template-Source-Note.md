@@ -9,7 +9,7 @@ venue: ""
 doi: ""
 url: ""
 tags: [source-note]
-created: {{date}}
+created: "{{date}}"
 ---
 
 # SRC: {{author}} ({{year}}) — {{short-title}}

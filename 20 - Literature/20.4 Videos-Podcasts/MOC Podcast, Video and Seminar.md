@@ -1,6 +1,6 @@
 ---
 title: MOC Podcast, Video and Seminar
-date: 2025-08-19, 17:54
+date: "2025-08-19 17:54"
 tags: [moc]
 aliases: []
 ---

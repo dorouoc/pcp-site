@@ -4,7 +4,7 @@ title: "Weekly Review — {{year}} W{{week}}"
 type: gtd-weekly
 tags: [gtd, weekly-review]
 week: "{{year}}-W{{week}}"
-created: {{date}}
+created: "{{date}}"
 ---
 
 # 📆 Weekly Review — {{year}} W{{week}}

@@ -3,7 +3,7 @@ id: ""
 title: "ST: {{theme}} — Structure Note"
 type: structure-note
 tags: [zettelkasten, structure-note]
-created: {{date}}
+created: "{{date}}"
 ---
 
 # ST: {{theme}} — Structure Note

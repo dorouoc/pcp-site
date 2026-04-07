@@ -3,8 +3,8 @@ id: "GT-Daily-{{date}}"
 title: "Daily Review — {{date}}"
 type: gtd-daily
 tags: [gtd, daily-review, tasks]
-date: {{date}}
-created: {{date}}
+date: "{{date}}"
+created: "{{date}}"
 ---
 
 # 📅 Daily Review — {{date}}

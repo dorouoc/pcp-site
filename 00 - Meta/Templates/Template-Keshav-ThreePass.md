@@ -10,8 +10,8 @@ status: pass-1  # pass-1 | pass-2 | pass-3 | archived
 relevance: 3    # 1-5
 topic: ""
 tags: [literature, keshav]
-created: {{date}}
-updated: {{date}}
+created: "{{date}}"
+updated: "{{date}}"
 ---
 
 # Keshav Three-Pass: {{title}}

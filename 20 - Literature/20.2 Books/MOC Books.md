@@ -1,6 +1,6 @@
 ---
 title: MOC Books
-date: 2025-08-19, 17:48
+date: "2025-08-19 17:48"
 tags: [moc]
 aliases: []
 ---
