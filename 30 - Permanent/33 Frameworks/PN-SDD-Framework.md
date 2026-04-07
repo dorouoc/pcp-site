@@ -128,9 +128,10 @@ D: Develop — Generate from specs
 
 ## 🔗 Connected Ideas
 
-**Implements:** [[PN-DSR-Method]] (Design step) | **Produces:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]]
-**Validated by:** [[PN-SLR-PRISMA]] (artefact evaluation) | **AI-assisted via:** [[PN-RCOIF-Framework]]
-**Agent generation:** [[PN-Agent-Prompt-Engineering]]
+**Implements:** [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] (Design step) | **Produces:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]]
+**Validated by:** [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] (SLR artefact evaluation) | **AI-assisted via:** [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]]
+**Agent generation:** [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Agent Prompt Engineering)
+**Constitution:** [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] | **Project context:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]]
 
 ---
 

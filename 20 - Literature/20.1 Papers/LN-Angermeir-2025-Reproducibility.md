@@ -75,3 +75,15 @@ keshav-pass: 3
 ## References in this paper (follow-up)
 - Wohlin et al. (2012) — Experimentation in SE ✅ already in vault
 - Kitchenham & Charters (2007) — SLR guidelines ✅ already in vault
+
+---
+
+## 🔗 Connected Notes
+
+**Permanent note:** [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Reproducibility section)
+**Also in:** [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]]
+**Cluster:** [[30 - Permanent/30 Zettelkasten-Hub/ST-Reproducibility-Cluster]]
+**Constitution response:** [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] (Art. 1, 2)
+**Architecture response:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]]
+**Chapter citation:** [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (Gap 1) · [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.8)
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-Literature-Review]] · [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

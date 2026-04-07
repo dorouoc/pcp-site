@@ -19,3 +19,7 @@ created: 2026-04-06
 **Related notes**:
 - [[20 - Literature/20.1 Papers/LLM-Agents-General/LN-Yao-2022-ReAct]]
 - [[20 - Literature/20.1 Papers/Agent-Architectures/LN-Yao-2023-TreeOfThoughts]]
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — ReAct concept note
+- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — CoT contrasted with ReAct
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]] — Stage 4 RAG+ReAct
+- [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]

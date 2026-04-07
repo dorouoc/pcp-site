@@ -70,9 +70,11 @@ Priority: [FINAL ANSWER]
 
 ## 🔗 Connected Ideas
 
-**Extends:** [[PN-Few-Shot-Prompting]] | **Used in:** [[60 - Resources/61 Prompts/PT-PUMA-Triage-CoT]]
-**Tested in:** [[40 - Projects/PUMA/41.7 Experiments/EX-Stage1-Triage-Overview]]
-**Contrasts with:** Zero-shot direct prompting | **Enabled by:** [[PN-RCOIF-Framework]] (I component)
+**Extends:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (Few-Shot section) | **Used in:** [[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+**Tested in:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (S4 strategy)
+**Contrasts with:** Zero-shot direct prompting | **Enabled by:** [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]] (I component)
+**PM target:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] | **Structure:** [[30 - Permanent/30 Zettelkasten-Hub/ST-Prompting-Strategies]]
+**Grounded by:** [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] (Stage 4 extension)
 
 ---
 ---
@@ -135,6 +137,9 @@ Priority:
 
 ## 🔗 Connected Ideas
 
-**Complements:** [[PN-Chain-of-Thought]] | **Contrasts with:** Zero-shot
-**Reference:** [[LN-Brown2020-GPT3-FewShot]] | **Tested in:** [[60 - Resources/61 Prompts/PT-PUMA-Triage-FewShot3]]
-**Key paper:** Calikli & Alhamed (2025) — request format affects estimation non-monotonically → [[LN-Calikli2025-RequestFormats]]
+**Complements:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (CoT section) | **Contrasts with:** Zero-shot
+**Key paper:** [[20 - Literature/20.1 Papers/LN-Calikli-2025-RequestFormats]] — request format affects estimation non-monotonically
+**Tested in:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (S2, S3 strategies)
+**PM application:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] | **Framework:** [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]]
+**Datasets:** [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] | **Structure:** [[30 - Permanent/30 Zettelkasten-Hub/ST-Prompting-Strategies]]
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]

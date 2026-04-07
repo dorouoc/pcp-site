@@ -77,12 +77,27 @@ updated: 2026-04-06
 
 ## 🧠 Key Permanent Notes
 
-- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — PM concepts
-- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — Prompting strategies
-- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — RAG for Stage 4
+**PM & Experiment concepts:**
+- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — F1-macro, MAE, priority schema
+- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — Prompting strategies (S1–S4)
 - [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Why local inference
-- [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — Research paradigm
-- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — Development methodology
+- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — RAG for Stage 4
+
+**Agent patterns:**
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Agents, Reproducibility, Uniqueness Trap, Red Teaming
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Specialisation (→ Smart PMO)
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — Stage 4 reasoning pattern
+
+**Research methods:**
+- [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — DSR + PRISMA
+- [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] — Statistical protocol
+
+**Frameworks:**
+- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — SDD + BDD + BMAD
+- [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]] — Structured prompting
+
+**Knowledge hub:**
+- [[30 - Permanent/30 Zettelkasten-Hub/ZK-Hub-PUMA]] — Full Zettelkasten index
 
 ---
 

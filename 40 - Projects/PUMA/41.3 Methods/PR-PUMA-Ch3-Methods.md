@@ -169,6 +169,26 @@ Results logged in: [[50 - Areas/54 Sustainability/Carbon-Tracking-Log]]
 
 ## 🔗 Related Notes
 
-[[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]]
-[[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
-[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
+**Specs & architecture:**
+[[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-Estimation-Dataset-Specs]] · [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]]
+
+**Hypotheses & experiments:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+
+**Research paradigm (§3.1):**
+[[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — DSR + SLR · [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] — Statistical methods
+
+**Datasets (§3.2):**
+[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] — Jira SR + TAWOS · [[20 - Literature/20.1 Papers/LN-Angermeir-2025-Reproducibility]]
+
+**Prompting strategies (§3.4):**
+[[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — CoT + Few-Shot theory · [[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+
+**PM concepts (§3.2, §3.6):**
+[[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — F1-macro + MAE metrics
+
+**Carbon tracking (§3.9):**
+[[50 - Areas/54 Sustainability/Carbon-Tracking-Log]]
+
+**Navigation:**
+[[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] · [[40 - Projects/PUMA/41.4 Results/PR-PUMA-Ch4-Results]] · [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

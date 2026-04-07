@@ -33,8 +33,10 @@ An LLM agent consists of four components:
 
 ## 🔗 Connected Ideas
 **Implemented via:** [[20 - Literature/20.6 Tools/LN-Tools-Ollama-ClaudeCode-OpenCode-BrowserOS]]
-**Framework:** [[30 - Permanent/33 Frameworks/PN-Agent-Prompt-Engineering]]
+**Framework:** [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Agent Prompt Engineering section)
+**Multi-agent patterns:** [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]]
 **Extended by:** [[20 - Literature/20.6 Tools/LN-Tools-Dev-Stack]] (CrewAI, LangGraph)
+**Architecture:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] | **MOC:** [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]
 
 ---
 ---
@@ -73,8 +75,11 @@ Three levels of reproducibility failure in current LLM+SE research:
 | Install simplicity | ≤10 commands from README to running results |
 
 ## 🔗 Connected Ideas
-**Evidence:** [[20 - Literature/20.1 Papers/LN-Angermeir2025-Reproducibility]]
-**Implemented in:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]]
+**Evidence:** [[20 - Literature/20.1 Papers/LN-Angermeir-2025-Reproducibility]]
+**Implemented in:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] (Art. 1)
+**Local inference rationale:** [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]]
+**Cluster:** [[30 - Permanent/30 Zettelkasten-Hub/ST-Reproducibility-Cluster]]
+**Applied in:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.8)
 
 ---
 ---
@@ -107,9 +112,11 @@ Few-shot prompting implements a lightweight form of Reference Class Forecasting:
 - This is precisely what H2 tests: does few-shot estimation improve over uncalibrated zero-shot?
 
 ## 🔗 Connected Ideas
-**Source:** [[20 - Literature/20.2 Books/LN-Flyvbjerg2023-BigThings]]
+**Source:** [[20 - Literature/20.2 Books/LN-Books-KeyReferences]] (Flyvbjerg & Gardner, 2023)
+**Key thinker:** [[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]]
 **Applied in:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (few-shot as reference class)
 **Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2 rationale)
+**Chapter:** [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (§1.1 problem 3)
 
 ---
 ---
@@ -158,8 +165,9 @@ For each: what additional evidence would distinguish your interpretation from mi
 
 ## 🔗 Connected Ideas
 **Part of:** [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]] (Level 3)
-**Example prompt:** [[60 - Resources/61 Prompts/61.1 LLM-Tools/PT-Claude-Red-Team]]
+**Example prompt:** [[60 - Resources/61 Prompts/61.1 LLM-Tools/PT-Advanced-Prompts-IIPR-Anchoring-AgentOS]]
 **Used in:** [[40 - Projects/PUMA/41.5 Discussion/PR-PUMA-Ch5-Discussion]]
+**Frameworks:** [[30 - Permanent/33 Frameworks/PN-AMI-DRCA-IIPR-Frameworks]] (adversarial critique tools)
 
 ---
 ---
@@ -212,6 +220,7 @@ If you cannot determine priority, use {"priority": "Low", "confidence": "low"}.
 - In PUMA: Python orchestrator + Ollama as inference backend
 
 ## 🔗 Connected Ideas
-**Implements:** [[PN-RCOIF-Framework]] (extended for agents)
-**Used in:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]]
-**Multi-agent reference:** [[20 - Literature/20.6 Tools/LN-Tools-Dev-Stack]] (CrewAI, LangGraph)
+**Implements:** [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]] (extended for agents)
+**Used in:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]]
+**Multi-agent reference:** [[20 - Literature/20.6 Tools/LN-Tools-Dev-Stack]] (CrewAI, LangGraph) · [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]]
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]

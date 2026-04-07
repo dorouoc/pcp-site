@@ -51,4 +51,10 @@ LLMs hallucinate because they generate text based on learned distributions, not 
 ## MOCs
 
 - [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]
-- [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI-v2]]
+- [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]
+
+## Additional Links
+
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]] — Stage 4 RAG+ReAct plan
+- [[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]] — Triage agent spec
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Multi-agent context

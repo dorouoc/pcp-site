@@ -53,11 +53,15 @@ This is distinct from a study using GPT-4: if GPT-4 succeeds, the result cannot 
 
 ## Related Notes
 
-- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]]
-- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]]
+- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — Stage 4 RAG on local models
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Reproducibility rationale
+- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — PUMA evaluation targets
+- [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Art. 2 Local-Only Inference
+- [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] — §3.3 Models
 - [[50 - Areas/54 Sustainability/Carbon-Tracking-Log]]
 
 ## MOCs
 
 - [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]
 - [[80 - MOC/81 Topic-Maps/MOC-Tools-Stack]]
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

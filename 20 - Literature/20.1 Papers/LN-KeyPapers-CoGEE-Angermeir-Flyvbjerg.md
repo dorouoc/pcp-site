@@ -86,9 +86,9 @@ created: 2026-03-01
 ## 🔗 Connections
 
 **Dataset:** [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]]
-**Task:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]]
-**Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2 baseline)
-**Extends:** [[20 - Literature/20.1 Papers/LN-Tawosi2022-TAWOS]]
+**Task:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] (Story Points section)
+**Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2 baseline — PUMA must approach CoGEE's MAE)
+**Methods:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.5 baselines)
 
 ---
 ---
@@ -141,9 +141,10 @@ PUMA is explicitly designed to be the counter-example: 100% reproducible, seed=4
 
 ## 🔗 Connections
 
-**Defines:** [[30 - Permanent/31 Concepts/PN-Reproducibility-in-SE]]
-**Motivates:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] (reproducibility constraints)
+**Defines:** [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Reproducibility section)
+**Motivates:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] (Art. 1)
 **Cited in:** [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (Gap 1)
+**Cluster:** [[30 - Permanent/30 Zettelkasten-Hub/ST-Reproducibility-Cluster]]
 
 ---
 ---
@@ -192,6 +193,8 @@ Project managers systematically resist using historical data from past similar p
 
 ## 🔗 Connections
 
-**Defines concept:** [[30 - Permanent/31 Concepts/PN-Uniqueness-Trap]]
-**Cited in:** [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (context)
-**Supports:** H2 rationale — few-shot historical anchoring improves estimation
+**Defines concept:** [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Uniqueness Trap section)
+**Key thinker:** [[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]]
+**Cited in:** [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (§1.1 problem 3)
+**Supports:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2 rationale — few-shot as reference class)
+**Applied via:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (few-shot examples as reference class)

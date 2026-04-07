@@ -86,8 +86,11 @@ The Jira SR has been used to show: human-assigned priorities exhibit significant
 
 ## 🔗 Connected Notes
 
-**Defines task for:** [[PN-Issue-Triage]] | **Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
-**Experiment:** [[40 - Projects/PUMA/41.7 Experiments/EX-Stage1-Triage-Overview]]
+**Defines task for:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] (Issue Triage section)
+**Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H1)
+**Experiment stages:** [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+**Methods:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.2.1)
+**Navigation:** [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]
 
 ---
 ---
@@ -154,5 +157,9 @@ created: 2026-03-01
 
 ## 🔗 Connected Notes
 
-**Task defined in:** [[PN-Story-Points]] | **Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
-**Key paper:** [[LN-Tawosi2024-CoGEE]] | **Experiment:** [[40 - Projects/PUMA/41.7 Experiments/EX-Stage2-Effort-Overview]]
+**Task defined in:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] (Story Points section)
+**Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2)
+**Key paper:** [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]] (CoGEE baseline)
+**Experiment stages:** [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+**Methods:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.2.2)
+**Navigation:** [[80 - MOC/81 Topic-Maps/MOC-Literature-Review]]

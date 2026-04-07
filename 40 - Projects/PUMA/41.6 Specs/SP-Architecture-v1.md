@@ -212,6 +212,20 @@ Feature: MVP Success Condition
 
 ## 🔗 Related Notes
 
+**Frameworks:**
 [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] | [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]]
-[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
-[[60 - Resources/61 Prompts/61.3 Dev-Tools/PT-ClaudeCode-Agent-Triage]]
+
+**Project governance:**
+[[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Non-negotiable principles | [[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]] — Triage agent spec | [[40 - Projects/PUMA/41.6 Specs/SP-Estimation-Dataset-Specs]]
+
+**Experiments & agents:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] | [[40 - Projects/PUMA/41.9 BMAD-Agents/BMAD-Agent-Roster]]
+
+**Core concepts:**
+[[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Agent OS, Reproducibility) | [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] (Local inference rationale)
+
+**Prompts:**
+[[60 - Resources/61 Prompts/61.3 Dev-Tools/PT-DevTools-Prompts]]
+
+**Navigation:**
+[[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] | [[80 - MOC/81 Topic-Maps/MOC-Tools-Stack]]

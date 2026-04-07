@@ -18,4 +18,7 @@ created: 2026-04-06
 
 **Related notes**:
 - [[20 - Literature/20.1 Papers/PM-AI-Convergence/LN-Assalaarachchi-2026-AgenticSPM]]
-- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]]
+- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]] — PUMA Stage 5 vision
+- [[30 - Permanent/31 Concepts/PN-Agentic-Science-Paradigm]] — Agentic science context
+- [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] — §1.2 objectives
+- [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]] — PM-AI convergence section

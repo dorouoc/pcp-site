@@ -113,6 +113,23 @@ Full log: [[50 - Areas/51 Research/AI-Use-Log]]
 
 ## 🔗 Connected Notes
 
-[[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]
-[[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Literature]]
-[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
+**Navigation:**
+[[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] · [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Ch3-Ch4-Ch5]] · [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]]
+
+**Hypotheses & Experiments:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+
+**Core Concepts (§1.1 problems):**
+[[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — Manual triage bias · [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Reproducibility gap + Uniqueness Trap
+
+**Datasets referenced:**
+[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] — Jira SR + TAWOS · [[20 - Literature/20.1 Papers/LN-Angermeir-2025-Reproducibility]] — Reproducibility crisis
+
+**Methodology (§1.4):**
+[[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — DSR + PRISMA · [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] — Statistical protocol
+
+**Project governance:**
+[[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Non-negotiable principles · [[40 - Projects/PUMA/41.9 BMAD-Agents/BMAD-Agent-Roster]] — Research team
+
+**Key thinkers:**
+[[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]] — Uniqueness Trap · [[30 - Permanent/37 Persons/PER-Assalaarachchi-Nuwan]] — Agentic SPM

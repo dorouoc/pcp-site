@@ -108,7 +108,20 @@ All figures: `matplotlib` + `seaborn`, reproducible from `notebooks/04_results_v
 
 ## 🔗 Related Notes
 
-[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
-[[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
-[[30 - Permanent/34 Results/RES-Triage-Stage1-Summary]]
-[[30 - Permanent/34 Results/RES-Estimation-Stage2-Summary]]
+**Experiments:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+
+**Methodology:**
+[[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] · [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]]
+
+**PM concepts:**
+[[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] · [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]]
+
+**Datasets:**
+[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] · [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]] (baselines)
+
+**Carbon:**
+[[50 - Areas/54 Sustainability/Carbon-Tracking-Log]]
+
+**Navigation:**
+[[40 - Projects/PUMA/41.5 Discussion/PR-PUMA-Ch5-Discussion]] · [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] · [[00 - Meta/Dashboards/Dashboard-Experiment-Status]]

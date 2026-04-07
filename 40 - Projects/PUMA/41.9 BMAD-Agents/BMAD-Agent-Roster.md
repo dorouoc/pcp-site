@@ -182,3 +182,8 @@ Key principles:
 - [[40 - Projects/PUMA/41.9 BMAD-Agents/BMAD-PRD-PUMA]] — Product Requirements Document
 - [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — SDD + BMAD methodology
 - [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Project constitution
+- [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — System architecture
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Agent OS + HITL + Red Teaming
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Scientific basis for team specialisation
+- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]] — Stage 5 multi-agent evolution
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] — Project hub

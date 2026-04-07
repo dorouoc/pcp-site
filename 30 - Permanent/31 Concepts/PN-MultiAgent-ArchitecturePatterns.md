@@ -59,5 +59,12 @@ PUMA Stage 5 (Smart PMO) tests the **multi-agent hypothesis**: does decomposing 
 
 ## MOCs
 
-- [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI-v2]]
+- [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]
 - [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]
+
+## Additional Links
+
+- [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — PUMA 7-layer architecture
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]] — Stage 5 multi-agent plan
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — Reasoning + acting pattern
+- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — BMAD multi-agent simulation

@@ -18,4 +18,7 @@ created: 2026-04-06
 
 **Related notes**:
 - [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method-Complete]]
+- [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]]
 - [[50 - Areas/51 Research/Keshav-ThreePass/Keshav-Reading-Log]]
+- [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]] — Keshav Three-Pass section
+- [[60 - Resources/62 Workflows/WF-SLR-Pipeline]] — Applied to PUMA SLR

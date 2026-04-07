@@ -53,11 +53,11 @@ updated: 2026-03-01
 
 | ID | Note | Authors | Year | PUMA Use |
 |----|------|---------|------|---------|
-| 20.11 | [[20 - Literature/20.1 Papers/LN-Tawosi2022-TAWOS]] | Tawosi et al. | 2022 | Dataset H2 |
-| 20.12 | [[20 - Literature/20.1 Papers/LN-Tawosi2024-CoGEE]] | Tawosi et al. | 2024 | Baseline H2 |
-| 20.13 | [[20 - Literature/20.1 Papers/LN-Ortu2015-JiraSR]] | Ortu et al. | 2015 | Dataset H1 |
-| 20.14 | [[20 - Literature/20.1 Papers/LN-Angermeir2025-Reproducibility]] | Angermeir et al. | 2025 | Gap 1 |
-| 20.15 | [[20 - Literature/20.1 Papers/LN-Calikli2025-RequestFormats]] | Calikli & Alhamed | 2025 | Gap 2 |
+| 20.11 | [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] (TAWOS section) | Tawosi et al. | 2022 | Dataset H2 |
+| 20.12 | [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]] (CoGEE section) | Tawosi et al. | 2024 | Baseline H2 |
+| 20.13 | [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] (Jira SR section) | Ortu et al. | 2015 | Dataset H1 |
+| 20.14 | [[20 - Literature/20.1 Papers/LN-Angermeir-2025-Reproducibility]] | Angermeir et al. | 2025 | Gap 1 |
+| 20.15 | [[20 - Literature/20.1 Papers/LN-Calikli-2025-RequestFormats]] | Calikli & Alhamed | 2025 | Gap 2 |
 | 20.16 | [[20 - Literature/20.1 Papers/LN-Strubell2019-EnergyNLP]] | Strubell et al. | 2019 | Gap 3 |
 | 20.17 | [[20 - Literature/20.1 Papers/LN-Manzoor2025-AI-PM]] | Manzoor et al. | 2025 | Context |
 | 20.18 | [[20 - Literature/20.1 Papers/LN-Wei2022-CoT]] | Wei et al. | 2022 | Methods |
@@ -75,7 +75,7 @@ updated: 2026-03-01
 
 | ID | Note | Authors | Year |
 |----|------|---------|------|
-| 20.31 | [[20 - Literature/20.2 Books/LN-Flyvbjerg2023-BigThings]] | Flyvbjerg & Gardner | 2023 |
+| 20.31 | [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]] (Flyvbjerg section) | Flyvbjerg & Gardner | 2023 |
 | 20.32 | [[20 - Literature/20.2 Books/LN-Allen2001-GTD]] | David Allen | 2001 |
 | 20.33 | [[20 - Literature/20.2 Books/LN-Ahrens2022-Zettelkasten]] | Sönke Ahrens | 2022 |
 | 20.34 | [[20 - Literature/20.2 Books/LN-Popper1959-LogicScientificDiscovery]] | Karl Popper | 1959 |
@@ -122,20 +122,24 @@ updated: 2026-03-01
 |----|------|---------|
 | 30.31-01 | [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] | 🌿 Growing |
 | 30.31-02 | [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] | 🌿 Growing |
-| 30.31-03 | [[30 - Permanent/31 Concepts/PN-LLM-Agents]] | 🌱 Seedling |
-| 30.31-04 | [[30 - Permanent/31 Concepts/PN-Quantization]] | 🌱 Seedling |
-| 30.31-05 | [[30 - Permanent/31 Concepts/PN-RAG-Concept]] | 🌱 Seedling |
-| 30.31-06 | [[30 - Permanent/31 Concepts/PN-Reproducibility-in-SE]] | 🌿 Growing |
-| 30.31-07 | [[30 - Permanent/31 Concepts/PN-Uniqueness-Trap]] | 🌿 Growing |
+| 30.31-03 | [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (LLM Agents section) | 🌱 Seedling |
+| 30.31-04 | [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] | 🌱 Seedling |
+| 30.31-05 | [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Reproducibility section) | 🌿 Growing |
+| 30.31-06 | [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Uniqueness Trap section) | 🌿 Growing |
+| 30.31-07 | [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] | 🌿 Growing |
+| 30.31-08 | [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] | 🌿 Growing |
+| 30.31-09 | [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] | 🌿 Growing |
+| 30.31-10 | [[30 - Permanent/31 Concepts/PN-Agentic-Science-Paradigm]] | 🌱 Seedling |
+| 30.31-11 | [[30 - Permanent/31 Concepts/PN-PUMA-within-AgenticScience-Trajectory]] | 🌱 Seedling |
 
 ### 32 Methods
 
 | ID | Note | Maturity |
 |----|------|---------|
 | 30.32-01 | [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] | 🌳 Evergreen |
-| 30.32-02 | [[30 - Permanent/32 Methods/PN-Wilcoxon-Test]] | 🌿 Growing |
-| 30.32-03 | [[30 - Permanent/32 Methods/PN-FINER-Criteria]] | 🌿 Growing |
-| 30.32-04 | [[30 - Permanent/32 Methods/PN-Cornell-Method]] | 🌿 Growing |
+| 30.32-02 | [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] (Wilcoxon section) | 🌿 Growing |
+| 30.32-03 | [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] (FINER section) | 🌿 Growing |
+| 30.32-04 | [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] (Cornell section) | 🌿 Growing |
 
 ### 33 Frameworks
 
@@ -146,10 +150,10 @@ updated: 2026-03-01
 | 30.33-03 | [[30 - Permanent/33 Frameworks/PN-EGI-Framework]] | 🌳 Evergreen |
 | 30.33-04 | [[30 - Permanent/33 Frameworks/PN-AMI-DRCA-IIPR-Frameworks]] | 🌳 Evergreen |
 | 30.33-05 | [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] | 🌳 Evergreen |
-| 30.33-06 | [[30 - Permanent/33 Frameworks/PN-Red-Teaming]] | 🌿 Growing |
-| 30.33-07 | [[30 - Permanent/33 Frameworks/PN-Agent-Prompt-Engineering]] | 🌿 Growing |
-| 30.33-08 | [[30 - Permanent/33 Frameworks/PN-PRISMA-DFLLM]] | 🌿 Growing |
-| 30.33-09 | [[30 - Permanent/33 Frameworks/PN-Contextual-Anchoring]] | 🌱 Seedling |
+| 30.33-06 | [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Red Teaming section) | 🌿 Growing |
+| 30.33-07 | [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Agent OS section) | 🌿 Growing |
+| 30.33-08 | [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] (PRISMA-DFLLM section) | 🌿 Growing |
+| 30.33-09 | [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] (Contextual Anchoring section) | 🌱 Seedling |
 
 ### 34 Results
 
@@ -172,7 +176,7 @@ updated: 2026-03-01
 | ID | Note | Phase | Status |
 |----|------|-------|--------|
 | 40.41 | [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] | F0 | ✅ Done |
-| 40.42 | [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Literature]] | F0–F1 | 🔄 Active |
+| 40.42 | [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Ch3-Ch4-Ch5]] | F0–F1 | 🔄 Active |
 | 40.43 | [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] | F1–F2 | 🔄 Active |
 | 40.44 | [[40 - Projects/PUMA/41.4 Results/PR-PUMA-Ch4-Results]] | F4 | ⏳ Pending |
 | 40.45 | [[40 - Projects/PUMA/41.5 Discussion/PR-PUMA-Ch5-Discussion]] | F4–F5 | ⏳ Pending |
@@ -219,8 +223,8 @@ updated: 2026-03-01
 | 80.80 | [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] |
 | 80.81 | [[80 - MOC/81 Topic-Maps/MOC-Research-Pipeline]] |
 | 80.82 | [[80 - MOC/81 Topic-Maps/MOC-Literature-Review]] |
-| 80.83 | [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks]] |
-| 80.84 | [[80 - MOC/81 Topic-Maps/MOC-Project-Management-AI]] |
+| 80.83 | [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]] |
+| 80.84 | [[80 - MOC/81 Topic-Maps/MOC-AI-Knowledge-Generation]] |
 | 80.85 | [[80 - MOC/81 Topic-Maps/MOC-Prompts-Library]] |
 | 80.86 | [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]] |
 | 80.87 | [[80 - MOC/81 Topic-Maps/MOC-Tools-Stack]] |

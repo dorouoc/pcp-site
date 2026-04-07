@@ -68,10 +68,14 @@ PUMA Stage 5 is, in this sense, an applied Agentic Science system for the PM dom
 ## Related Notes
 
 - [[30 - Permanent/31 Concepts/PN-AI-Scientific-Knowledge-Generation]]
+- [[30 - Permanent/31 Concepts/PN-PUMA-within-AgenticScience-Trajectory]]
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Specialised agents in science
 - [[20 - Literature/20.1 Papers/Agentic-Science/LN-Zhang-2025-AgenticScienceSurvey]]
 - [[20 - Literature/20.1 Papers/AI-Knowledge-Generation/LN-Lu-2024-AIScientist]]
-- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]]
+- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]] — PUMA Stage 5 as applied Agentic Science
+- [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] — Three enabling conditions
 
 ## MOCs
 
 - [[80 - MOC/81 Topic-Maps/MOC-AI-Knowledge-Generation]]
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

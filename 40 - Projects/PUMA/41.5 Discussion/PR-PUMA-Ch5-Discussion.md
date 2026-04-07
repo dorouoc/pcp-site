@@ -116,6 +116,25 @@ Contribution summary:
 ## Red Team Preparation (Pre-Submission)
 
 Before submitting Ch. 5, run these red team prompts:
-- [[60 - Resources/61 Prompts/61.1 LLM-Tools/PT-Claude-Red-Team]] → rival hypothesis for main finding
-- [[60 - Resources/61 Prompts/61.1 LLM-Tools/PT-Claude-AMI-Review]] → section review
+- [[60 - Resources/61 Prompts/61.1 LLM-Tools/PT-Advanced-Prompts-IIPR-Anchoring-AgentOS]] → rival hypothesis for main finding
+- [[60 - Resources/61 Prompts/61.5 BMAD-Prompts/PT-BMAD-Agent-Prompts]] → section review via Red Teamer agent
 - Manual: "If F1=0.58, is this practically meaningful or just statistically significant?"
+
+---
+
+## 🔗 Related Notes
+
+**Results source:**
+[[40 - Projects/PUMA/41.4 Results/PR-PUMA-Ch4-Results]] · [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
+
+**Theoretical context:**
+[[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] · [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Red Teaming)
+[[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Uniqueness Trap — §5.1 H2 discussion)
+[[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]] — Uniqueness Trap in H2 interpretation
+
+**Future work:**
+[[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]] · [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] (Stage 4)
+[[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] (Stage 5)
+
+**Navigation:**
+[[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] · [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

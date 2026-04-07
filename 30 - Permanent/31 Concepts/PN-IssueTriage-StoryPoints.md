@@ -64,10 +64,13 @@ This achieves approximately F1-macro = 0.45–0.52 on Jira SR. PUMA H1 tests whe
 
 ## 🔗 Connected Ideas
 
-**Dataset:** [[20 - Literature/20.3 Datasets/LN-Jira-Social-Repository]]
+**Dataset:** [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] (Jira SR)
 **Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H1)
-**Prompts:** [[60 - Resources/61 Prompts/PT-PUMA-Triage-ZeroShot]] · [[60 - Resources/61 Prompts/PT-PUMA-Triage-CoT]]
-**Related concept:** [[PN-Story-Points]]
+**Methods:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.2, §3.6)
+**Prompts:** [[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+**Related concept:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] · [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Uniqueness Trap)
+**Glossary:** [[60 - Resources/64 Glossary/Glossary-Master]] (Issue Triage, F1-macro)
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] · [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]
 
 ---
 ---
@@ -121,7 +124,11 @@ This non-linearity must be accounted for in prompts:
 
 ## 🔗 Connected Ideas
 
-**Dataset:** [[20 - Literature/20.3 Datasets/LN-TAWOS-Dataset]]
+**Dataset:** [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] (TAWOS)
 **Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2)
-**Key paper:** [[LN-Tawosi2024-CoGEE]] | **Related concept:** [[PN-Issue-Triage]]
-**Prompts:** [[60 - Resources/61 Prompts/PT-PUMA-Estimation-FewShot]]
+**Methods:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.2, §3.6)
+**Core paper:** [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]]
+**Related concept:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (few-shot as reference class) · [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] (Uniqueness Trap)
+**Prompts:** [[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+**Glossary:** [[60 - Resources/64 Glossary/Glossary-Master]] (Story Points, MAE, Fibonacci scale)
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] · [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]

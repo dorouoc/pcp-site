@@ -69,11 +69,15 @@ RAG reduces cognitive load on the LLM by externalising knowledge — but this cr
 
 ## Related Notes
 
-- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]]
-- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]]
-- [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Reproducibility risk with RAG
+- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — Few-shot vs RAG comparison
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — ReAct loop + RAG (Stage 4)
+- [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Local RAG stack
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]] — Stage 4 RAG plan
+- [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — Layer 2 memory
 
 ## MOCs
 
 - [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]
 - [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]
+- [[80 - MOC/81 Topic-Maps/MOC-Tools-Stack]]

@@ -94,10 +94,12 @@ In PUMA, RCOIF is used at two levels:
 
 ## 🔗 Connected Ideas
 
-**Is a type of:** [[PN-Prompt-Engineering]]
-**Extends:** [[PN-Chain-of-Thought]] (CoT adds reasoning steps to the I component)
-**Used in:** [[PN-EGI-Framework]] · [[PN-AMI-Framework]] · [[PN-DRCA-Framework]]
+**Extends:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (CoT adds reasoning steps to the I component)
+**Used in:** [[30 - Permanent/33 Frameworks/PN-EGI-Framework]] · [[30 - Permanent/33 Frameworks/PN-AMI-DRCA-IIPR-Frameworks]]
 **Contrasts with:** Zero-shot unstructured prompting
+**Applied to PUMA prompts:** [[60 - Resources/61 Prompts/61.1 LLM-Tools/PT-Claude-RCOIF-Research]] · [[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+**Experiment context:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.4) · [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]
 
 ---
 

@@ -61,6 +61,9 @@ For each primary tool, a fallback exists that maintains the same reproducibility
 
 - [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Article 1 (reproducibility non-negotiable)
 - [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Why local inference wins on reproducibility
+- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — ChromaDB → Qdrant migration logic
+- [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — Full technology stack
+- [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] — §3.3 Models, §3.5 Baselines
 
 ## MOCs
 

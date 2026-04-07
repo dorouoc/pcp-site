@@ -49,10 +49,13 @@ These are **prediction tasks with ground truth** — exactly the domain where Le
 
 ## Related Notes
 
-- [[30 - Permanent/31 Concepts/PN-AI-Scientific-Knowledge-Generation]]
-- [[30 - Permanent/31 Concepts/PN-Agentic-Science-Paradigm]]
-- [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]]
+- [[30 - Permanent/31 Concepts/PN-AI-Scientific-Knowledge-Generation]] — AI discovery examples (AlphaFold, GraphCast)
+- [[30 - Permanent/31 Concepts/PN-Agentic-Science-Paradigm]] — Closed-loop research paradigm
+- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — PUMA's Level 2 prediction tasks
+- [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] — §1.1 context + §1.3 ethics
 - [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Ch3-Ch4-Ch5]]
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] — H1+H2 as Level 2 predictions
+- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]] — Stage 5 approaching Level 3
 
 ## MOCs
 

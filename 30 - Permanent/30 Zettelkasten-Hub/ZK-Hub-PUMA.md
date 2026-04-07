@@ -114,6 +114,39 @@ SORT file.name ASC
 
 ---
 
+## 📎 Quick Note Index (permanent notes)
+
+### 31 Concepts
+- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — Issue triage + effort estimation (F1-macro, MAE)
+- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — Chain-of-Thought + Few-Shot theory
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — LLM Agents, Reproducibility, Uniqueness Trap, Red Teaming, Agent OS
+- [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Why local inference for benchmarks
+- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — RAG for Stage 4
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — Reasoning + acting agent loop
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Specialisation boundaries
+- [[30 - Permanent/31 Concepts/PN-Agentic-Science-Paradigm]] — Agentic science paradigm
+- [[30 - Permanent/31 Concepts/PN-AI-Scientific-Knowledge-Generation]] — AI-driven discovery
+- [[30 - Permanent/31 Concepts/PN-PUMA-within-AgenticScience-Trajectory]] — PUMA's theoretical position
+- [[30 - Permanent/31 Concepts/PN-ToolSelection-PUMA]] — Tool choice rationale
+
+### 32 Methods
+- [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — DSR paradigm + PRISMA SLR
+- [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] — Statistical methods + FINER
+
+### 33 Frameworks
+- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — Spec-Driven Development + BDD + BMAD
+- [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]] — Structured prompting methodology
+- [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]] — Research reading method
+- [[30 - Permanent/33 Frameworks/PN-EGI-Framework]] — Guided domain exploration
+- [[30 - Permanent/33 Frameworks/PN-AMI-DRCA-IIPR-Frameworks]] — Advanced prompting techniques
+- [[30 - Permanent/33 Frameworks/PN-PARA-GTD-Zettelkasten]] — Vault organisation integration
+
+### Structure Notes
+- [[30 - Permanent/30 Zettelkasten-Hub/ST-Prompting-Strategies]] — Prompting strategies cluster
+- [[30 - Permanent/30 Zettelkasten-Hub/ST-Reproducibility-Cluster]] — Reproducibility cluster
+
+---
+
 ## 🗺️ Related MOCs
 
 - [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

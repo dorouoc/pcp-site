@@ -60,8 +60,11 @@ updated: 2026-04-06
 
 ## Person Notes (Key Thinkers)
 
-→ [[30 - Permanent/37 Persons/PER-Keshav-Srinivasan]] — Three-Pass Method author *(new)*
-→ [[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]] — Uniqueness Trap / RCF *(new)*
+→ [[30 - Permanent/37 Persons/PER-Keshav-Srinivasan]] — Three-Pass Method author
+→ [[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]] — Uniqueness Trap / Reference Class Forecasting
+→ [[30 - Permanent/37 Persons/PER-Yao-Shunyu]] — ReAct + Tree of Thoughts
+→ [[30 - Permanent/37 Persons/PER-Hong-Sirui-MetaGPT]] — MetaGPT multi-agent framework
+→ [[30 - Permanent/37 Persons/PER-Assalaarachchi-Nuwan]] — Agentic SPM vision
 
 ---
 

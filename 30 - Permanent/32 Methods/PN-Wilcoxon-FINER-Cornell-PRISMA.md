@@ -50,7 +50,7 @@ def wilcoxon_test(llm_scores: list, baseline_scores: list, alpha=0.05) -> dict:
 | α = 0.05 | Standard in SE research |
 | r ≥ 0.1 for H₀ rejection | Minimum practical significance (Kitchenham 2002) |
 
-**🔗** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]]
+**🔗** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] · [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.7) · [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] (F1-macro, MAE metrics)
 
 ---
 ---
@@ -77,7 +77,7 @@ maturity: evergreen
 | **E**thical | Does it respect privacy, fairness, consent? | ✅ Public data, open models, HITL design |
 | **R**elevant | Does it matter for practice? | ✅ ICT PM is a billion-dollar industry |
 
-**🔗** [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] · [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
+**🔗** [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] · [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (§1.2 RQ validation)
 
 ---
 ---

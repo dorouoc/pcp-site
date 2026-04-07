@@ -34,10 +34,11 @@ DSR (Hevner et al., 2004; Peffers et al., 2007) holds that IS research must:
 
 ## Integration with SDD/BDD
 
-In PUMA, DSR is extended by Spec-Driven Development: every artefact component is specified before implementation, using [[PN-SDD-Framework]] and BDD scenarios. This makes the "Design" step more rigorous and reproducible.
+In PUMA, DSR is extended by Spec-Driven Development: every artefact component is specified before implementation, using [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] and BDD scenarios. This makes the "Design" step more rigorous and reproducible.
 
 ## 🔗 Connected Ideas
-**Produces:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] | **Evaluated by:** [[PN-SLR-PRISMA]] | **Extended by:** [[PN-SDD-Framework]]
+**Produces:** [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] | **Evaluated by:** [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] (SLR section) | **Extended by:** [[30 - Permanent/33 Frameworks/PN-SDD-Framework]]
+**Applied in:** [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] (§1.4) | [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.1)
 
 ---
 id: PN-SLR-PRISMA
@@ -101,4 +102,5 @@ For AI-assisted screening, document for each AI tool used:
 | **R**elevant | Directly applicable to ICT PM practitioners ✅ |
 
 ## 🔗 Connected Ideas
-**Guides:** [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Literature]] | **Uses:** [[PN-FINER-Criteria]] | **Extended by:** [[PN-PRISMA-DFLLM]]
+**Guides:** [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Ch3-Ch4-Ch5]] | **Uses:** [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] (FINER + PRISMA) | **Workflow:** [[60 - Resources/62 Workflows/WF-SLR-Pipeline]]
+**Active log:** [[50 - Areas/51 Research/SLR-PRISMA/PRISMA-Log]] | **MOC:** [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]

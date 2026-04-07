@@ -70,3 +70,14 @@ The paper likely tests:
 **Used in**: Section 1.1 (Limitation 2 — gap: no systematic prompting comparison), Section 2.3 (justification for 4-strategy design), H₀₂ framing
 
 **Key claim for PUMA Project**: "Calikli & Alhamed (2025) demonstrate that prompt format has non-monotonic effects on LLM estimation quality — an effect no existing PM benchmark controls systematically."
+
+---
+
+## 🔗 Connected Notes
+
+**Permanent note:** [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (Few-Shot section)
+**Dataset:** [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] (TAWOS)
+**Hypothesis:** [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2 — why we test multiple strategies)
+**PM concepts:** [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] (story point estimation)
+**Methods:** [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.4 prompting strategies)
+**MOC:** [[80 - MOC/81 Topic-Maps/MOC-Literature-Review]] · [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]

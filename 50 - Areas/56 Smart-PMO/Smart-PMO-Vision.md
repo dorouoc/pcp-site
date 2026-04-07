@@ -86,5 +86,13 @@ The Smart PMO vision is documented in:
 
 ## References
 
-- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]]
-- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]]
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Agent OS, HITL
+- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — Layer 2 memory/context
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Specialisation rationale
+- [[30 - Permanent/31 Concepts/PN-Agentic-Science-Paradigm]] — Closed-loop science parallel
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — Agent reasoning loop
+- [[30 - Permanent/37 Persons/PER-Flyvbjerg-Bent]] — Reference Class Forecasting
+- [[40 - Projects/PUMA/41.9 BMAD-Agents/BMAD-Agent-Roster]] — Current BMAD team
+- [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — Stage 1–3 architecture
+- [[40 - Projects/PUMA/41.5 Discussion/PR-PUMA-Ch5-Discussion]] — Future work section
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

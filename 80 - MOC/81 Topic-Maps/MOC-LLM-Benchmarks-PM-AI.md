@@ -49,7 +49,7 @@ updated: 2026-04-06
 
 ### Architecture Surveys & Taxonomies
 - [[20 - Literature/20.1 Papers/Agent-Architectures/LN-Masterman-2024-AgentArchSurvey]] — Landscape of AI agent architectures
-- [[20 - Literature/20.1 Papers/Agent-Architectures/LN-Ning-2024-AgentTaxonomy]] — Taxonomy + decision model for agent design
+- [[20 - Literature/20.1 Papers/Agent-Architectures/LN-Ning-2025-AgentTaxonomy]] — Taxonomy + decision model for agent design
 - [[20 - Literature/20.1 Papers/Agent-Architectures/LN-Tang-2025-LLMOrbit]] — LLMOrbit: scaling to agentic AI taxonomy
 
 ### Memory & State
@@ -96,7 +96,16 @@ updated: 2026-04-06
 
 ## 🔗 Related Permanent Notes
 
-- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]]
-- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]]
-- [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]]
-- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]]
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Agent OS, Reproducibility
+- [[30 - Permanent/31 Concepts/PN-RAG-Embeddings-VectorDB]] — Stage 4 RAG
+- [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Local vs cloud tradeoff
+- [[30 - Permanent/31 Concepts/PN-MultiAgent-ArchitecturePatterns]] — Specialisation evidence
+- [[30 - Permanent/31 Concepts/PN-ReAct-AgentPattern]] — ReAct foundation
+- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — PUMA target tasks
+- [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]] — Stage 5 future
+
+## 🔗 Related MOCs
+
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]
+- [[80 - MOC/81 Topic-Maps/MOC-Literature-Review]]
+- [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]

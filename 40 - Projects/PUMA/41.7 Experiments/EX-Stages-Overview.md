@@ -99,8 +99,23 @@ SORT f1_macro DESC
 
 ## 🔗 Related Notes
 
-[[EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]]
+**Hypotheses & governance:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] (Art. 1, 3)
+
+**Specs:**
+[[40 - Projects/PUMA/41.6 Specs/SP-Triage-Agent-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] · [[40 - Projects/PUMA/41.6 Specs/SP-Estimation-Dataset-Specs]]
+
+**Datasets:**
 [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]]
+
+**Prompts:**
+[[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+
+**PM concepts:**
+[[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] · [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]]
+
+**Navigation:**
+[[40 - Projects/PUMA/41.4 Results/PR-PUMA-Ch4-Results]] · [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]
 
 ---
 ---
@@ -162,5 +177,14 @@ created: 2026-04-10
 
 ## 🔗 Related Notes
 
-[[EX-Hypotheses-H1-H2]] · [[40 - Projects/PUMA/41.6 Specs/SP-Estimation-Dataset-Specs]]
-[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] · [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]]
+**Stage 1 context:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] (H2) · [[40 - Projects/PUMA/41.6 Specs/SP-Estimation-Dataset-Specs]]
+
+**Dataset & baseline:**
+[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] (TAWOS) · [[20 - Literature/20.1 Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg]] (CoGEE baseline)
+
+**PM concepts:**
+[[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] (MAE, Fibonacci scale) · [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] (strategies S1–S3)
+
+**Navigation:**
+[[40 - Projects/PUMA/41.4 Results/PR-PUMA-Ch4-Results]] · [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

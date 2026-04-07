@@ -156,7 +156,23 @@ SORT stage ASC, f1_macro DESC
 
 ## 🔗 Related Notes
 
-[[40 - Projects/PUMA/41.7 Experiments/EX-Stage1-Triage-Overview]]
-[[40 - Projects/PUMA/41.7 Experiments/EX-Stage2-Effort-Overview]]
-[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]]
-[[30 - Permanent/35 Hypotheses/PN-Falsifiability-Popper]]
+**Experiment stages:**
+[[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
+
+**PM concepts (H1 + H2 targets):**
+[[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — F1-macro (H1) + MAE (H2) definitions · [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Local model constraints
+
+**Prompting strategies (independent variables):**
+[[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — CoT + Few-Shot theory · [[30 - Permanent/30 Zettelkasten-Hub/ST-Prompting-Strategies]] — Strategy cluster
+
+**Datasets:**
+[[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] — Jira SR (H1) + TAWOS (H2)
+
+**Statistical protocol:**
+[[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] — Wilcoxon + effect size · [[30 - Permanent/30 Zettelkasten-Hub/ST-Reproducibility-Cluster]]
+
+**Project integration:**
+[[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] — Full methodology · [[40 - Projects/PUMA/41.4 Results/PR-PUMA-Ch4-Results]] — Where results will go · [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Falsifiability principle (Art. 3)
+
+**Navigation:**
+[[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] · [[80 - MOC/81 Topic-Maps/MOC-LLM-Benchmarks-PM-AI]]

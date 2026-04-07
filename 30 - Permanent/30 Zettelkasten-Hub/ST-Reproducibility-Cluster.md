@@ -31,3 +31,6 @@ created: 2026-04-06
 | Absent random seeds | seed=42 everywhere |
 
 → [[20 - Literature/20.1 Papers/LN-Angermeir-2025-Reproducibility]]
+→ [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] (Art. 1)
+→ [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] (§3.8)
+→ [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]]

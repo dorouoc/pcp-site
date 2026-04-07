@@ -103,4 +103,26 @@ Before any sprint review, validate:
 
 ---
 
+---
+
+## 🔗 Related Notes
+
+**Core concepts referenced:**
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Reproducibility crisis (Art. 1) · Human-in-the-Loop (Art. 4)
+- [[30 - Permanent/31 Concepts/PN-LLM-Local-vs-Cloud]] — Local-only inference rationale (Art. 2)
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] — H1/H2 falsifiability requirements (Art. 3)
+- [[50 - Areas/51 Research/AI-Use-Log]] — AI transparency log (Art. 7)
+- [[50 - Areas/54 Sustainability/Carbon-Tracking-Log]] — Environmental accountability (Art. 6)
+
+**Implemented through:**
+- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — Spec Kit + OpenSpec methodology
+- [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — System architecture implementing these principles
+- [[40 - Projects/PUMA/41.3 Methods/PR-PUMA-Ch3-Methods]] — Reproducibility protocol in practice
+
+**Navigation:**
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] — Project hub
+- [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]] — All methodologies
+
+---
+
 *Constitution v1.0 — Locked 2026-03-01 — Any amendment requires advisor approval*

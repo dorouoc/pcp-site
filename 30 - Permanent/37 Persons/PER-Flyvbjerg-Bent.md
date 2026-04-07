@@ -19,5 +19,10 @@ created: 2026-04-06
 **Relevance to H2**: The "mean historical SP" baseline in Stage 2 is a simple form of reference class thinking. A well-designed LLM few-shot agent could do better by selecting a more specific reference class.
 
 **Related notes**:
-- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]]
+- [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — Story points estimation (H2)
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Uniqueness Trap concept
+- [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] — Few-shot as reference class
+- [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]] — H2 rationale
+- [[40 - Projects/PUMA/41.1 Introduction/PR-PUMA-Ch1-Introduction]] — §1.1 problem 3
 - [[50 - Areas/56 Smart-PMO/Smart-PMO-Vision]]
+- [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]

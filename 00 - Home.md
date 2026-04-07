@@ -27,7 +27,7 @@ methodology: [PARA, GTD, Zettelkasten, JohnnyDecimal, SDD, BMAD, CDD, KeshavThre
 | 📥 New Fleeting Note    | [[10 - Inbox/Fleeting-Notes/Template-Fleeting-Note]]       | Capture now       |
 | 🗺️ PUMA Master Map     | [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]]                 | Central hub       |
 | 🤖 BMAD Agent Roster    | [[40 - Projects/PUMA/41.9 BMAD-Agents/BMAD-Agent-Roster]]  | Agent team        |
-| 📋 Sprint Board         | [[Sprint-02]]   | Active sprint     |
+| 📋 Sprint Board         | [[40 - Projects/PUMA/41.8 Sprint-Boards/Sprint-02]]   | Active sprint     |
 | 📚 Glossary             | [[60 - Resources/64 Glossary/Glossary-Master]]             | All terms         |
 | 📖 Bibliography         | [[60 - Resources/65 Bibliographies/BIB-Master-APA7]]       | APA7 refs         |
 | 🔢 JD Index             | [[60 - Resources/66 Johnny-Decimal-Index/JD-Master-Index]] | File address book |
@@ -110,17 +110,17 @@ New idea / paper / observation
 
 ### Methodology Integration
 
-| Layer | Methodology | Purpose |
-|-------|-------------|---------|
-| Structure | PARA | Organise by actionability |
-| Numbering | Johnny Decimal | Every file has an address |
-| Workflow | GTD | Capture → Clarify → Organise → Reflect → Engage |
-| Knowledge | Zettelkasten | Atomic, permanent, linked ideas |
-| Development | SDD + OpenSpec + Spec Kit | Spec-first |
-| AI Team | BMAD | Multi-agent simulation |
-| Paper Reading | Keshav Three-Pass | Systematic literature processing |
-| AI Prompting | CDD + RCOIF + CoT + AMI + EGI | Context-driven AI assistance |
-| Navigation | MOCs | Hub notes for complex topics |
+| Layer | Methodology | Purpose | Note |
+|-------|-------------|---------|------|
+| Structure | PARA | Organise by actionability | [[30 - Permanent/33 Frameworks/PN-PARA-GTD-Zettelkasten]] |
+| Numbering | Johnny Decimal | Every file has an address | [[60 - Resources/66 Johnny-Decimal-Index/JD-Master-Index]] |
+| Workflow | GTD | Capture → Clarify → Organise → Reflect → Engage | [[30 - Permanent/33 Frameworks/PN-PARA-GTD-Zettelkasten]] |
+| Knowledge | Zettelkasten | Atomic, permanent, linked ideas | [[30 - Permanent/30 Zettelkasten-Hub/ZK-Hub-PUMA]] |
+| Development | SDD + OpenSpec + Spec Kit | Spec-first | [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] |
+| AI Team | BMAD | Multi-agent simulation | [[40 - Projects/PUMA/41.9 BMAD-Agents/BMAD-Agent-Roster]] |
+| Paper Reading | Keshav Three-Pass | Systematic literature processing | [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]] |
+| AI Prompting | CDD + RCOIF + CoT + AMI + EGI | Context-driven AI assistance | [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]] · [[30 - Permanent/31 Concepts/PN-CoT-FewShot-Prompting]] |
+| Navigation | MOCs | Hub notes for complex topics | [[80 - MOC/81 Topic-Maps/MOC-PUMA-Master]] |
 
 ---
 

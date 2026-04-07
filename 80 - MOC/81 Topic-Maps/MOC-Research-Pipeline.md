@@ -47,10 +47,10 @@ Phase 5: Evaluation & Discussion
 ```
 
 **Key notes:**
-- [[30 - Permanent/32 Methods/PN-SLR-PRISMA]] — SLR protocol
-- [[30 - Permanent/32 Methods/PN-FINER-Criteria]] — Research question quality
-- [[30 - Permanent/33 Frameworks/PN-PRISMA-DFLLM]] — AI-augmented PRISMA
-- [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Literature]] — SLR execution
+- [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — SLR + PRISMA protocol
+- [[30 - Permanent/32 Methods/PN-Wilcoxon-FINER-Cornell-PRISMA]] — FINER + PRISMA details
+- [[50 - Areas/51 Research/SLR-PRISMA/PRISMA-Log]] — Active screening log
+- [[40 - Projects/PUMA/41.2 Literature-Review/PR-PUMA-Ch2-Ch3-Ch4-Ch5]] — SLR execution
 
 ---
 
@@ -77,11 +77,10 @@ SDD Chain:
 ```
 
 **Key notes:**
-- [[30 - Permanent/32 Methods/PN-DSR-Method]] — DSR paradigm
-- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — Spec-Driven Development
-- [[30 - Permanent/33 Frameworks/PN-BDD-Framework]] — Behaviour-Driven Development
-- [[30 - Permanent/33 Frameworks/PN-BMAD-Framework]] — BMAD workflow
+- [[30 - Permanent/32 Methods/PN-DSR-SLR-Methods]] — DSR paradigm + SLR
+- [[30 - Permanent/33 Frameworks/PN-SDD-Framework]] — Spec-Driven Development + BDD + BMAD
 - [[40 - Projects/PUMA/41.6 Specs/SP-Architecture-v1]] — PUMA architecture
+- [[40 - Projects/PUMA/41.6 Specs/SP-PUMA-Constitution]] — Non-negotiable principles
 
 ---
 
@@ -91,15 +90,15 @@ The MIT Student Method operates at three levels in PUMA:
 
 | Level | Application | Tools |
 |-------|------------|-------|
-| **Reading/Synthesis** | Cornell notes + DRCA on each paper | [[30 - Permanent/33 Frameworks/PN-Cornell-Method]] |
+| **Reading/Synthesis** | Cornell notes + DRCA on each paper | [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]] |
 | **AI Interaction** | RCOIF/RCOF + EGI + AMI + IIPR patterns | [[30 - Permanent/33 Frameworks/PN-RCOIF-Framework]] |
-| **Red Teaming** | Rival hypotheses, counter-evidence search | [[30 - Permanent/33 Frameworks/PN-Red-Teaming]] |
+| **Red Teaming** | Rival hypotheses, counter-evidence search | [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] |
 
 **Key notes:**
-- [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]] — Full method
+- [[30 - Permanent/33 Frameworks/PN-MIT-Student-Method]] — Full method (Cornell + Red Teaming)
 - [[30 - Permanent/33 Frameworks/PN-EGI-Framework]] — Guided Interactive Exploration
-- [[30 - Permanent/33 Frameworks/PN-AMI-Framework]] — Autodiagnosis & Iterative Improvement
-- [[30 - Permanent/33 Frameworks/PN-DRCA-Framework]] — Deconstruction & Reconstruction
+- [[30 - Permanent/33 Frameworks/PN-AMI-DRCA-IIPR-Frameworks]] — AMI + DRCA + IIPR
+- [[30 - Permanent/31 Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam]] — Red Teaming practice
 
 ---
 

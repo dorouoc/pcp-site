@@ -37,4 +37,9 @@ The four prompting strategies evaluated in Stage 1 and Stage 2:
 | Chain-of-Thought | `S4` | Wei et al. 2022 |
 
 → [[40 - Projects/PUMA/41.7 Experiments/EX-Hypotheses-H1-H2]]
+→ [[40 - Projects/PUMA/41.7 Experiments/EX-Stages-Overview]]
 → [[60 - Resources/61 Prompts/PT-PUMA-Experiment-Prompts]]
+→ [[20 - Literature/20.1 Papers/LN-Calikli-2025-RequestFormats]] — non-monotonic k effect
+→ [[20 - Literature/20.3 Datasets/LN-Datasets-JiraSR-TAWOS]] — evaluation datasets
+→ [[30 - Permanent/31 Concepts/PN-IssueTriage-StoryPoints]] — PUMA tasks measured
+→ [[80 - MOC/81 Topic-Maps/MOC-Methods-Frameworks]] — All prompting methods
