@@ -1,156 +1,1669 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PUMA Research Vault</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUMA Research Vault — Complete Index</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0a;
+      --bg-card:   #111111;
+      --bg-alt:    #161616;
+      --border:    #2a2a2a;
+      --text:      #d4d4d4;
+      --text-dim:  #888888;
+      --text-head: #f0f0f0;
+      --accent:    #5b8fd4;
+      --accent2:   #7ec8a0;
+      --accent3:   #c4a55d;
+      --accent4:   #b07ec4;
+      --tag-bg:    #1e2535;
+      --tag-text:  #7baae0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Courier New", Courier, monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      padding: 0 1rem 4rem;
+    }
+
+    /* ── Layout ─────────────────────────────────── */
+    .page-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ─────────────────────────────────── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--text-head);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+
+    header .subtitle {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+
+    header p {
+      color: var(--text-dim);
+      max-width: 72ch;
+      font-size: 0.88rem;
+    }
+
+    /* ── TOC nav ─────────────────────────────────── */
+    nav.toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.4rem 1.8rem;
+      margin-bottom: 3rem;
+      display: inline-block;
+      min-width: 260px;
+    }
+
+    nav.toc h2 {
+      color: var(--text-head);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    nav.toc ol {
+      list-style: decimal;
+      padding-left: 1.2rem;
+    }
+
+    nav.toc li { margin: 0.3rem 0; }
+
+    nav.toc a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    nav.toc a:hover { text-decoration: underline; color: var(--text-head); }
+
+    /* ── Sections ────────────────────────────────── */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    section > h2 {
+      color: var(--text-head);
+      font-size: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    section > h3 {
+      color: var(--accent2);
+      font-size: 1rem;
+      margin: 1.6rem 0 0.7rem;
+    }
+
+    section > h4 {
+      color: var(--accent3);
+      font-size: 0.9rem;
+      margin: 1.2rem 0 0.5rem;
+    }
+
+    p { margin-bottom: 0.8rem; max-width: 80ch; }
+
+    ul, ol { padding-left: 1.4rem; margin-bottom: 0.8rem; }
+    li { margin: 0.2rem 0; }
+
+    /* ── Cards / info boxes ──────────────────────── */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .card p { color: var(--text-dim); font-size: 0.87rem; margin-bottom: 0; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ── Tags / badges ───────────────────────────── */
+    .tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid #2c3a52;
+      border-radius: 3px;
+      padding: 0.1em 0.5em;
+      font-size: 0.77rem;
+      margin: 0.15rem 0.15rem 0.15rem 0;
+    }
+
+    /* ── Tables ─────────────────────────────────── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.4rem;
+      font-size: 0.87rem;
+    }
+
+    th {
+      background: var(--bg-alt);
+      color: var(--text-head);
+      text-align: left;
+      padding: 0.5rem 0.8rem;
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text);
+    }
+
+    tr:nth-child(even) td { background: var(--bg-alt); }
+
+    /* ── Index sections ──────────────────────────── */
+    .index-section {
+      margin-bottom: 2.4rem;
+    }
+
+    .index-section h3 {
+      color: var(--text-head);
+      font-size: 0.98rem;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 0.45rem 0.9rem;
+      margin-bottom: 0.5rem;
+      margin-top: 1.6rem;
+    }
+
+    .index-section h4 {
+      color: var(--accent3);
+      font-size: 0.88rem;
+      margin: 1rem 0 0.3rem 0.8rem;
+      border-left: 2px solid var(--accent3);
+      padding-left: 0.6rem;
+    }
+
+    .index-section h5 {
+      color: var(--accent4);
+      font-size: 0.83rem;
+      margin: 0.8rem 0 0.3rem 1.6rem;
+      border-left: 2px solid var(--accent4);
+      padding-left: 0.5rem;
+    }
+
+    .file-list {
+      list-style: none;
+      padding-left: 1.2rem;
+      margin: 0.2rem 0 0.6rem;
+    }
+
+    .file-list li {
+      margin: 0.18rem 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .file-list li::before {
+      content: "·";
+      color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    .file-list a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      word-break: break-all;
+    }
+
+    .file-list a:hover {
+      color: var(--text-head);
+      text-decoration: underline;
+    }
+
+    .nested-list {
+      padding-left: 1.4rem;
+    }
+
+    .nested-list .file-list {
+      padding-left: 0.8rem;
+    }
+
+    /* ── Skills grid ──────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem 1.2rem;
+    }
+
+    .skill-card h4 {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-card .skill-cat {
+      font-size: 0.72rem;
+      color: var(--accent3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      color: var(--text-dim);
+      font-size: 0.83rem;
+      margin-bottom: 0;
+    }
+
+    /* ── Method boxes ─────────────────────────────── */
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .method-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem 1.2rem;
+    }
+
+    .method-card h4 {
+      color: var(--accent2);
+      font-size: 0.92rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .method-card p {
+      font-size: 0.84rem;
+      color: var(--text-dim);
+      margin-bottom: 0;
+    }
+
+    /* ── Note types table ─────────────────────────── */
+    code {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.1em 0.4em;
+      font-family: inherit;
+      font-size: 0.87em;
+      color: var(--accent3);
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 3rem;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    /* ── Utility ─────────────────────────────────── */
+    .dim { color: var(--text-dim); }
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent2); }
+    .back-top {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--text-dim);
+      font-size: 0.78rem;
+      text-decoration: none;
+    }
+    .back-top:hover { color: var(--accent); }
+
+    .separator {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .count-badge {
+      display: inline-block;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      border-radius: 10px;
+      padding: 0.05em 0.6em;
+      font-size: 0.75rem;
+      vertical-align: middle;
+      margin-left: 0.4rem;
+    }
+  </style>
 </head>
 <body>
+<div class="page-wrap">
 
-<h1>PUMA Research Vault</h1>
-<p><strong>PUMA (PUMA Understanding and Management with Agents)</strong> — Platform for Understanding and Management Model Agents: An Empirical Benchmark for LLM-Assisted ICT Project Management</p>
+<!-- ══════════════════════════════════════════════ HEADER -->
+<header id="top">
+  <h1>PUMA Research Vault</h1>
+  <p class="subtitle">Platform for Understanding and Management with Agents — Empirical Benchmark for LLM-Assisted ICT Project Management</p>
+  <p>A unified, multi-methodology knowledge system for doctoral-level research on autonomous AI agents applied to software project management. This vault integrates six knowledge management paradigms, multiple research methodologies, a rich prompt library, and a custom Claude AI skill system — all organized under the Johnny Decimal numbering scheme and hosted on GitHub Pages.</p>
+</header>
 
-<h2>🗺️ What is this vault?</h2>
-<p>This vault is the unified knowledge management system for the PUMA project. It integrates six complementary methodological systems into a single coherent workspace:</p>
+<!-- ══════════════════════════════════════════════ TOC -->
+<nav class="toc" aria-label="Table of Contents">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#overview">Project Overview</a></li>
+    <li><a href="#methodologies">Knowledge Management Methodologies</a></li>
+    <li><a href="#research-frameworks">Research Frameworks</a></li>
+    <li><a href="#note-types">Note Types &amp; Prefixes</a></li>
+    <li><a href="#claude-folder">The .claude Folder &amp; Skills</a></li>
+    <li><a href="#vault-structure">Vault Structure (Johnny Decimal)</a></li>
+    <li><a href="#full-index">Full Index of Files</a>
+      <ol>
+        <li><a href="#idx-root">Root</a></li>
+        <li><a href="#idx-00">00 — Meta</a></li>
+        <li><a href="#idx-10">10 — Inbox</a></li>
+        <li><a href="#idx-20">20 — Literature</a></li>
+        <li><a href="#idx-30">30 — Permanent</a></li>
+        <li><a href="#idx-40">40 — Projects</a></li>
+        <li><a href="#idx-50">50 — Areas</a></li>
+        <li><a href="#idx-60">60 — Resources</a></li>
+        <li><a href="#idx-70">70 — Archive</a></li>
+        <li><a href="#idx-80">80 — MOC</a></li>
+        <li><a href="#idx-90">90 — GTD</a></li>
+        <li><a href="#idx-claude">· claude</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
-<table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-        <th>Layer</th>
-        <th>System</th>
-        <th>Purpose</th>
-    </tr>
-    <tr>
-        <td>Navigation</td>
-        <td>MOC (Map of Content)</td>
-        <td>Top-level orientation maps</td>
-    </tr>
-    <tr>
-        <td>Productivity</td>
-        <td>GTD (Getting Things Done)</td>
-        <td>Task & commitment management</td>
-    </tr>
-    <tr>
-        <td>Organisation</td>
-        <td>PARA</td>
-        <td>Projects · Areas · Resources · Archive</td>
-    </tr>
-    <tr>
-        <td>Knowledge</td>
-        <td>Zettelkasten</td>
-        <td>Atomic, permanent, linked ideas</td>
-    </tr>
-    <tr>
-        <td>Numbering</td>
-        <td>Johnny Decimal</td>
-        <td>Unique IDs for every note and folder</td>
-    </tr>
-    <tr>
-        <td>Engineering</td>
-        <td>SDD / BDD / BMAD</td>
-        <td>Spec-first development artefacts</td>
-    </tr>
-</table>
+<!-- ══════════════════════════════════════════════ OVERVIEW -->
+<section id="overview">
+  <h2>1. Project Overview</h2>
 
-<p><strong>Research frameworks integrated:</strong> EBSE+SLR/PRISMA · DSR · Grounded Theory · MIT Student Method · RCOIF · EGI · AMI · DRCA · IIPR · CoT · Few-Shot · Zero-Shot CoT · CDD · Agent OS · Agent Prompt Engineering.</p>
+  <p>PUMA (<strong>PUMA Understanding and Management with Agents</strong>) is a research project investigating whether autonomous Large Language Model agents can perform practical software project management tasks — specifically issue triage and effort estimation — with accuracy and reproducibility comparable to human experts.</p>
 
-<h2>🏗️ Vault Structure (Johnny Decimal)</h2>
-<ul>
-    <li><strong>00 - Meta</strong> → Templates, dashboards, plugin configs</li>
-    <li><strong>10 - Inbox</strong> → Fleeting notes, quick capture (process daily)</li>
-    <li><strong>20 - Literature</strong> → All source materials (papers, books, datasets, tools…)</li>
-    <li><strong>30 - Permanent</strong> → Evergreen Zettelkasten notes (concepts, methods, results)</li>
-    <li><strong>40 - Projects</strong> → Active project work (PUMA chapters, specs, experiments)</li>
-    <li><strong>50 - Areas</strong> → Ongoing responsibilities (research, writing, code, ethics)</li>
-    <li><strong>60 - Resources</strong> → Reusable assets (prompts, workflows, checklists, glossary)</li>
-    <li><strong>70 - Archive</strong> → Completed and deprecated material</li>
-    <li><strong>80 - MOC</strong> → Maps of Content and master indexes</li>
-    <li><strong>90 - GTD</strong> → Tasks, reviews, someday/maybe lists</li>
-</ul>
+  <p>The project is conducted as a Bachelor's / Master's thesis in ICT Engineering and uses a multi-stage empirical pipeline: systematic literature review → artifact design → LLM-based agent construction → experiment on real-world datasets (TAWOS, Jira SR) → statistical validation and replication package publication.</p>
 
-<h2>🚀 Start Here</h2>
-<ul>
-    <li>Daily workflow → <em>90 - GTD/95 Reviews/Daily-Review-Template</em></li>
-    <li>Project overview → <em>80 - MOC/81 Topic-Maps/MOC-PUMA-Master</em></li>
-    <li>Research pipeline → <em>80 - MOC/81 Topic-Maps/MOC-Research-Pipeline</em></li>
-    <li>Prompts library → <em>80 - MOC/81 Topic-Maps/MOC-Prompts-Library</em></li>
-    <li>Glossary → <em>60 - Resources/64 Glossary/Glossary-Master</em></li>
-</ul>
+  <h3>Core Mission</h3>
+  <p>Design, implement, and empirically evaluate a multi-agent LLM system — the PUMA platform — that autonomously triages software issues (classifying type, priority, and component) and estimates story-point effort from issue text. The platform is benchmarked against human-annotated ground truth using standard SE metrics (accuracy, F1, MAE, MRE) and statistical tests (Wilcoxon, ANOVA).</p>
 
-<h2>📋 Recommended Plugins</h2>
-<p>See <em>00 - Meta/Plugins-Config/Recommended-Plugins</em> for full setup instructions.</p>
-<p><strong>Essential:</strong> Dataview · Templater · Tasks · Calendar · Periodic Notes · Git · QuickAdd · Kanban · Excalidraw · Smart Connections · Zotero Integration</p>
+  <h3>Research Hypotheses</h3>
+  <ul>
+    <li><strong>H1 (Triage):</strong> An LLM agent using few-shot prompting achieves &gt;75% F1 on issue type and priority classification on the TAWOS dataset.</li>
+    <li><strong>H2 (Estimation):</strong> An LLM agent using chain-of-thought reasoning achieves a Mean Relative Error ≤35% on story-point estimation on the Jira SR dataset.</li>
+  </ul>
 
-<h2>📖 How to Use This Vault</h2>
+  <h3>Datasets</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h4>TAWOS</h4>
+      <p>The Agile Work Items and Operations Study. A curated dataset of Jira issues from multiple open-source projects, providing ground-truth labels for type, priority, component, and resolution. Hosted on GitHub (SOLAR-group/TAWOS).</p>
+    </div>
+    <div class="card">
+      <h4>Jira SR (Story Points)</h4>
+      <p>Zenodo dataset (DOI: 10.5281/zenodo.5901893) containing story point estimates and issue descriptions from multiple industrial and open-source Jira projects, enabling regression and classification experiments on effort estimation.</p>
+    </div>
+  </div>
 
-<h3>The Note Lifecycle</h3>
-<p>Idea/Source → <strong>10 Inbox</strong> → Process → <strong>20 Literature</strong> or <strong>30 Permanent</strong><br>
-↓<br>
-Referenced in <strong>40 Projects</strong><br>
-↓<br>
-Linked in <strong>80 MOC</strong></p>
+  <h3>Technology Stack</h3>
+  <p>
+    <span class="tag">Claude (Anthropic)</span>
+    <span class="tag">GPT-4o (OpenAI)</span>
+    <span class="tag">Llama 3 (local)</span>
+    <span class="tag">Ollama</span>
+    <span class="tag">LangGraph</span>
+    <span class="tag">AutoGen</span>
+    <span class="tag">CrewAI</span>
+    <span class="tag">Python</span>
+    <span class="tag">Zotero</span>
+    <span class="tag">Obsidian</span>
+    <span class="tag">GitHub Actions</span>
+    <span class="tag">Prometheus / Grafana</span>
+    <span class="tag">Semantic Scholar API</span>
+    <span class="tag">Promptfoo</span>
+    <span class="tag">PydanticAI</span>
+    <span class="tag">Supabase</span>
+  </p>
 
-<h3>Note Types</h3>
-<table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-        <th>Prefix</th>
-        <th>Type</th>
-        <th>Example</th>
-    </tr>
-    <tr>
-        <td>FL-</td>
-        <td>Fleeting note</td>
-        <td>FL-2026-03-15-LLM-idea</td>
-    </tr>
-    <tr>
-        <td>LN-</td>
-        <td>Literature note</td>
-        <td>LN-Tawosi2022-TAWOS</td>
-    </tr>
-    <tr>
-        <td>PN-</td>
-        <td>Permanent note</td>
-        <td>PN-Few-Shot-Prompting</td>
-    </tr>
-    <tr>
-        <td>PR-</td>
-        <td>Project note</td>
-        <td>PR-PUMA-Ch1-Introduction</td>
-    </tr>
-    <tr>
-        <td>SP-</td>
-        <td>Spec note</td>
-        <td>SP-Triage-Agent-v1</td>
-    </tr>
-    <tr>
-        <td>EX-</td>
-        <td>Experiment note</td>
-        <td>EX-Llama32-ZeroShot-Triage</td>
-    </tr>
-    <tr>
-        <td>PT-</td>
-        <td>Prompt template</td>
-        <td>PT-Claude-RCOIF-Research</td>
-    </tr>
-    <tr>
-        <td>GT-</td>
-        <td>GTD note</td>
-        <td>GT-Weekly-Review-2026-W10</td>
-    </tr>
-    <tr>
-        <td>MC-</td>
-        <td>Map of Content</td>
-        <td>MC-LLM-Benchmarks</td>
-    </tr>
-</table>
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
 
-<h2>🔗 Key Connections</h2>
-<ul>
-    <li>GitHub Repository: <a href="https://github.com/[your-username]/PUMA">https://github.com/[your-username]/PUMA</a></li>
-    <li>Zotero Library: PUMA group library</li>
-    <li>Datasets: Jira SR (Zenodo DOI: 10.5281/zenodo.5901893) · TAWOS (GitHub: SOLAR-group/TAWOS)</li>
-</ul>
+<!-- ══════════════════════════════════════════════ METHODOLOGIES -->
+<section id="methodologies">
+  <h2>2. Knowledge Management Methodologies</h2>
 
-<p><em>Last updated: 2026 · License: MIT · Built for PUMA project</em></p>
+  <p>The vault fuses six complementary knowledge management systems into a single coherent workspace. Each system is not used in isolation — they reinforce each other, each covering a different dimension of the research lifecycle.</p>
 
+  <div class="method-grid">
+    <div class="method-card">
+      <h4>MOC — Maps of Content</h4>
+      <p>MOC notes act as index pages that gather links to related notes by topic, forming a navigable graph of knowledge rather than a rigid hierarchy. Each major domain (agents, benchmarks, methods, tools, videos) has a dedicated MOC in <code>80 - MOC/81 Topic-Maps/</code>. The MOC layer is the primary navigation surface for the vault; it replaces folders as the main organizational paradigm at the semantic level.</p>
+    </div>
+    <div class="method-card">
+      <h4>GTD — Getting Things Done</h4>
+      <p>David Allen's GTD system governs all task and commitment management. The vault's <code>90 - GTD/</code> area houses the active task list, master projects list, and someday/maybe queue. Daily and weekly reviews (templated) ensure that captured tasks are processed, clarified, and either acted upon, deferred, or discarded. GTD prevents the research inbox from becoming a graveyard of unprocessed ideas.</p>
+    </div>
+    <div class="method-card">
+      <h4>PARA — Projects · Areas · Resources · Archive</h4>
+      <p>Tiago Forte's PARA framework provides the macro-level organizational skeleton. <code>40 - Projects</code> holds active, deadline-bound research work. <code>50 - Areas</code> contains ongoing responsibilities with no end date (research practice, writing, ethics). <code>60 - Resources</code> stores reusable assets (prompts, workflows, glossary). <code>70 - Archive</code> holds completed and deprecated material. PARA ensures every note has a home and that homes decay gracefully as work evolves.</p>
+    </div>
+    <div class="method-card">
+      <h4>Zettelkasten</h4>
+      <p>Niklas Luhmann's slip-box methodology generates atomic, permanent, densely-linked knowledge notes in <code>30 - Permanent/</code>. Each permanent note encodes a single idea, carries a unique identifier, and links to related notes by concept rather than by topic. The Zettelkasten is the intellectual core of the vault — it is where raw literature notes are distilled into original insights, conceptual clusters emerge, and theoretical frameworks crystallize. Literature notes (<code>LN-</code>) feed the Zettelkasten; permanent notes (<code>PN-</code>) are its output.</p>
+    </div>
+    <div class="method-card">
+      <h4>Johnny Decimal</h4>
+      <p>A numeric address system that assigns a unique two-digit code to every area (00–90) and a decimal sub-code to every sub-area (20.1, 20.2, …). This prevents folder sprawl, enables precise cross-referencing (e.g., <em>see 60.64 Glossary</em>), and makes every file findable by its address alone. The entire vault is structured under Johnny Decimal, from root folders to sub-sub-directories.</p>
+    </div>
+    <div class="method-card">
+      <h4>SDD / BDD / BMAD</h4>
+      <p><strong>Spec-Driven Development (SDD)</strong> treats formal specifications as the source of truth from which code and experiments are derived. <strong>Behaviour-Driven Development (BDD)</strong> expresses requirements as human-readable scenarios. <strong>BMAD (Build, Manage, Adapt, Deploy)</strong> is an AI-native project management methodology that orchestrates specialized AI agents through clearly defined roles (Analyst, Architect, QA, etc.) using structured PRDs and sprint boards. The PUMA platform's own development follows SDD+BMAD, treating the AI agent system as a product developed by AI agents.</p>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
+
+<!-- ══════════════════════════════════════════════ RESEARCH FRAMEWORKS -->
+<section id="research-frameworks">
+  <h2>3. Research Frameworks</h2>
+
+  <p>PUMA integrates a layered stack of research methodologies — from the macro study design down to the micro level of individual prompting strategies. Together they ensure rigor, reproducibility, and systematic knowledge generation.</p>
+
+  <h3>Primary Research Methods</h3>
+  <div class="method-grid">
+    <div class="method-card">
+      <h4>EBSE + SLR / PRISMA</h4>
+      <p>Evidence-Based Software Engineering (EBSE) is the epistemological foundation: research claims must be grounded in empirical evidence from controlled experiments or systematic reviews. The Systematic Literature Review (SLR) protocol — reported using the PRISMA 2020 checklist — maps the state of the art on LLM agents in project management, defining inclusion/exclusion criteria, search strings, screening stages, and a PRISMA flow diagram.</p>
+    </div>
+    <div class="method-card">
+      <h4>DSR — Design Science Research</h4>
+      <p>Hevner et al.'s DSR framework treats the PUMA agent platform as an <em>artifact</em> to be designed, built, and evaluated against utility criteria. The DSR cycle (problem identification → design → artifact construction → evaluation → communication) maps directly to the thesis chapters. DSR legitimizes the construction of a novel AI system as a valid research contribution, not merely an engineering exercise.</p>
+    </div>
+    <div class="method-card">
+      <h4>Grounded Theory</h4>
+      <p>Used for qualitative analysis of emergent patterns — particularly for analysing agent reasoning traces, failure modes, and unexpected behaviours during experiments. Constant comparison, open coding, and memo-writing allow conceptual categories to emerge from the data rather than being imposed a priori. Especially relevant for Stage 2 (estimation) where LLM chain-of-thought outputs require qualitative interpretation.</p>
+    </div>
+    <div class="method-card">
+      <h4>MIT Student Method</h4>
+      <p>A structured research workflow from the MIT AI Lab (Working Paper WP316, Patrick Winston). Emphasises vision → steps → news as the three essential contributions of any research work. Applied in PUMA to structure each experimental stage: articulate the novel contribution, identify the incremental steps, and frame results as publishable findings. Literature notes follow a three-pass reading protocol (Keshav 2007) within this framework.</p>
+    </div>
+  </div>
+
+  <h3>Prompting &amp; Agent Engineering Frameworks</h3>
+
+  <table>
+    <thead>
+      <tr><th>Framework</th><th>Category</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>RCOIF</strong></td><td>Prompting</td><td>Role · Context · Objective · Instructions · Format. A structured prompting template that eliminates ambiguity by forcing explicit specification of each element before querying an LLM. Used as the default prompt format across the vault.</td></tr>
+      <tr><td><strong>EGI</strong></td><td>Prompting</td><td>Explicit Goal-setting and Iterative refinement. A dialogue-based prompting loop where each agent turn either confirms goal alignment or requests clarification before proceeding. Minimises hallucinated assumptions.</td></tr>
+      <tr><td><strong>AMI</strong></td><td>Prompting</td><td>Anchored Multi-step Inference. Grounds long reasoning chains in verified anchors (retrieved facts, defined terms) at each step to prevent reasoning drift in multi-hop questions.</td></tr>
+      <tr><td><strong>DRCA</strong></td><td>Prompting</td><td>Decompose · Reason · Critique · Answer. A four-phase prompt pattern that forces explicit task decomposition, step-by-step reasoning, self-critique, and a final synthesized answer. Particularly effective for complex triage decisions.</td></tr>
+      <tr><td><strong>IIPR</strong></td><td>Prompting</td><td>Intent · Information · Process · Result. A structured template for research prompts ensuring the LLM understands the intent behind a query, the information context available, the required process, and the expected result format.</td></tr>
+      <tr><td><strong>CoT</strong></td><td>Prompting</td><td>Chain-of-Thought prompting. Elicits step-by-step reasoning from LLMs by inserting the phrase "Let's think step by step" or by providing reasoning exemplars. Dramatically improves performance on multi-step tasks like story-point estimation.</td></tr>
+      <tr><td><strong>Few-Shot</strong></td><td>Prompting</td><td>Provides 3–8 labelled examples in the prompt context, enabling in-context learning without model fine-tuning. Used in Stage 1 (triage) to demonstrate the labelling schema to the LLM.</td></tr>
+      <tr><td><strong>Zero-Shot CoT</strong></td><td>Prompting</td><td>Combines zero-shot prompting with chain-of-thought elicitation. The model reasons without examples, guided only by the instruction to think step by step. Baseline for comparison against few-shot variants.</td></tr>
+      <tr><td><strong>CDD</strong></td><td>Development</td><td>Context-Driven Development. Treats the LLM context window as the primary design space. Every agent, tool, and memory component is designed with explicit consideration of context window limits, injection order, and compression strategies.</td></tr>
+      <tr><td><strong>Agent OS</strong></td><td>Architecture</td><td>A framework for orchestrating multiple specialized LLM agents through a shared operating-system-like interface: task queue, memory bus, tool registry, and inter-agent messaging. PUMA implements a lightweight Agent OS with Claude Code as the orchestrator runtime.</td></tr>
+      <tr><td><strong>Agent Prompt Engineering</strong></td><td>Architecture</td><td>The discipline of designing, testing, and iterating on system prompts for autonomous agents. Includes techniques such as role priming, skill injection, negative example provision, and exit-condition specification. The <code>60 - Resources/61 Prompts/</code> area is the prompt engineering library.</td></tr>
+    </tbody>
+  </table>
+
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
+
+<!-- ══════════════════════════════════════════════ NOTE TYPES -->
+<section id="note-types">
+  <h2>4. Note Types &amp; Prefixes</h2>
+
+  <p>Every note in the vault carries a prefix that encodes its type, enabling Dataview queries, filtered searches, and Zettelkasten linking by type. The note lifecycle flows: raw capture → literature note → permanent note → project reference → MOC entry.</p>
+
+  <table>
+    <thead>
+      <tr><th>Prefix</th><th>Type</th><th>Location</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>FL-</code></td><td>Fleeting Note</td><td>10 - Inbox</td><td>FL-2026-03-15-LLM-idea</td></tr>
+      <tr><td><code>LN-</code></td><td>Literature Note</td><td>20 - Literature</td><td>LN-Tawosi2022-TAWOS</td></tr>
+      <tr><td><code>PN-</code></td><td>Permanent Note</td><td>30 - Permanent</td><td>PN-Few-Shot-Prompting</td></tr>
+      <tr><td><code>ST-</code></td><td>Structure Note</td><td>30 - Permanent</td><td>ST-Prompting-Strategies</td></tr>
+      <tr><td><code>SRC-</code></td><td>Source Note</td><td>30 - Permanent/36 Sources</td><td>SRC-Keshav-2007-HowToReadPaper</td></tr>
+      <tr><td><code>PER-</code></td><td>Person Note</td><td>30 - Permanent/37 Persons</td><td>PER-Yao-Shunyu</td></tr>
+      <tr><td><code>RES-</code></td><td>Results Note</td><td>30 - Permanent/34 Results</td><td>RES-Results-Placeholders</td></tr>
+      <tr><td><code>PR-</code></td><td>Project Note</td><td>40 - Projects</td><td>PR-PUMA-Ch1-Introduction</td></tr>
+      <tr><td><code>SP-</code></td><td>Spec Note</td><td>40 - Projects/Specs</td><td>SP-Triage-Agent-v1</td></tr>
+      <tr><td><code>EX-</code></td><td>Experiment Note</td><td>40 - Projects/Experiments</td><td>EX-Llama32-ZeroShot-Triage</td></tr>
+      <tr><td><code>PT-</code></td><td>Prompt Template</td><td>60 - Resources/61 Prompts</td><td>PT-Claude-RCOIF-Research</td></tr>
+      <tr><td><code>WF-</code></td><td>Workflow Note</td><td>60 - Resources/62 Workflows</td><td>WF-SLR-Pipeline</td></tr>
+      <tr><td><code>CL-</code></td><td>Checklist</td><td>60 - Resources/63 Checklists</td><td>CL-Quality-Checklists</td></tr>
+      <tr><td><code>BIB-</code></td><td>Bibliography</td><td>60 - Resources/65 Bibliographies</td><td>BIB-Master-APA7</td></tr>
+      <tr><td><code>KW-</code></td><td>Keyword Map</td><td>60 - Resources/64 Glossary</td><td>KW-Category1-AI-Agents</td></tr>
+      <tr><td><code>VID-</code></td><td>Video Note</td><td>20 - Literature/20.4 Videos-Podcasts</td><td>VID-AGT-001-Karpathy-RAG</td></tr>
+      <tr><td><code>GT-</code></td><td>GTD Note</td><td>90 - GTD</td><td>GT-Weekly-Review-2026-W10</td></tr>
+      <tr><td><code>MC-</code></td><td>Map of Content</td><td>80 - MOC</td><td>MC-LLM-Benchmarks</td></tr>
+      <tr><td><code>BMAD-</code></td><td>BMAD Agent Doc</td><td>40 - Projects/BMAD-Agents</td><td>BMAD-PRD-PUMA</td></tr>
+    </tbody>
+  </table>
+
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
+
+<!-- ══════════════════════════════════════════════ CLAUDE FOLDER -->
+<section id="claude-folder">
+  <h2>5. The .claude Folder &amp; Skills</h2>
+
+  <p>The <code>.claude/</code> folder is the AI integration layer of the vault. It contains two sub-systems: the <strong>PUMA skill library</strong> (custom Claude AI skills written specifically for this research project) and the <strong>obsidian-skills plugin</strong> (a community marketplace of Obsidian-specific Claude skills). Together they turn Claude Code into a domain-aware research assistant that understands vault conventions, research methodologies, and Obsidian internals.</p>
+
+  <h3>How Skills Work</h3>
+  <p>Each skill is a Markdown file (named <code>*.md</code> or <code>SKILL.md</code>) containing a <code>name</code>, <code>description</code>, and a body that provides Claude with structured domain knowledge. When Claude operates within this vault, it automatically loads relevant skills based on the task at hand — a governance layer (<code>puma-core</code>) is always active; domain skills are injected as needed. Skills eliminate the need to repeat context in every prompt: instead of explaining "the vault uses Johnny Decimal and the note prefix is LN-", Claude already knows this from the skill system.</p>
+
+  <h3>PUMA Custom Skills</h3>
+
+  <h4>Core</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">core / governance</div>
+      <h4>puma-core</h4>
+      <p>Always-active master skill. Defines the PUMA project identity, primary principles (AI as thinking partner, spec-driven development, methodology-first), the vault's Johnny Decimal rule set, and the thinking-and-action framework every Claude session must follow before taking any action.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">core / orchestration</div>
+      <h4>puma-orchestrator</h4>
+      <p>Defines how multiple specialized agents are coordinated: role assignment, task decomposition, inter-agent communication protocols, and escalation rules when an agent cannot complete a sub-task alone.</p>
+    </div>
+  </div>
+
+  <h4>Development</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-agent-design</h4>
+      <p>Guidelines for designing LLM-based agents in the PUMA system: agent roles (Triage Agent, Estimation Agent, QA Agent), tool specifications, memory architecture, and evaluation hooks.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-agile</h4>
+      <p>Agile project management conventions for the PUMA development process: sprint structure, Definition of Done, retrospective format, and velocity tracking adapted for AI-assisted development cycles.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-bmad</h4>
+      <p>BMAD method implementation for PUMA: PRD format, agent roster definitions, story decomposition conventions, and the BMAD sprint-board template used in <code>40 - Projects/PUMA/41.8 Sprint-Boards/</code>.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-cdd</h4>
+      <p>Context-Driven Development rules: how to structure system prompts, when to use skill injection vs. in-prompt context, context window budgeting strategies, and compression heuristics for long research sessions.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-experiment</h4>
+      <p>Experiment design and execution protocol: how to set up a reproducible experiment note, log LLM outputs, record prompt versions, and capture evaluation metrics in a structured way compatible with the results template.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-openspec</h4>
+      <p>OpenSpec standard for writing machine-readable specifications that can be consumed by both human developers and LLM agents. Defines schema for endpoint specs, data contracts, and agent interface definitions.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-sdd</h4>
+      <p>Spec-Driven Development conventions: spec-first workflow, how to write a valid SDD spec note (<code>SP-</code>), the relationship between specs and implementation, and the sign-off process before any coding begins.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">development</div>
+      <h4>puma-spec-kit</h4>
+      <p>A comprehensive kit of specification templates and checklists for PUMA artifacts: architecture spec, triage agent spec, estimation dataset spec, and the PUMA Constitution.</p>
+    </div>
+  </div>
+
+  <h4>Knowledge Management</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">knowledge</div>
+      <h4>puma-moc</h4>
+      <p>Rules for creating and maintaining Maps of Content: when to create a new MOC, how to link notes into it, naming conventions, and the difference between an MOC note and a Structure Note.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">knowledge</div>
+      <h4>puma-zettelkasten</h4>
+      <p>Zettelkasten conventions for the PUMA vault: how to convert a literature note into a permanent note, atomic note principles, linking syntax, hub note creation, and the Zettelkasten Hub in <code>30 - Permanent/30 Zettelkasten-Hub/</code>.</p>
+    </div>
+  </div>
+
+  <h4>Prompting</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">prompting</div>
+      <h4>puma-rcoif</h4>
+      <p>Implements the RCOIF framework (Role · Context · Objective · Instructions · Format). Provides the template structure and usage guidelines for writing RCOIF-compliant prompts in the vault.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">prompting</div>
+      <h4>puma-cot</h4>
+      <p>Chain-of-Thought prompting guidelines: when to use zero-shot CoT vs. few-shot CoT, how to structure reasoning chains for triage and estimation tasks, and how to parse CoT outputs for evaluation.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">prompting</div>
+      <h4>puma-prompting</h4>
+      <p>Master prompting skill that consolidates all prompting frameworks (RCOIF, CoT, Few-Shot, DRCA, AMI, EGI, IIPR) into a single reference, with decision logic for choosing the right framework for each task type.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">prompting</div>
+      <h4>puma-advanced-prompt</h4>
+      <p>Advanced prompting techniques: anchoring, self-consistency, multi-turn dialogue design, adversarial prompt testing, and red-teaming strategies for evaluating agent robustness.</p>
+    </div>
+  </div>
+
+  <h4>Research</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">research</div>
+      <h4>puma-research</h4>
+      <p>Master research skill: how to execute the PUMA research pipeline from SLR to experiment to thesis chapter, with pointers to each methodology skill and the SLR-PRISMA workflow in <code>60 - Resources/62 Workflows/WF-SLR-Pipeline.md</code>.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">research</div>
+      <h4>puma-literature-review</h4>
+      <p>SLR execution protocol: formulating PICO/PICOC research questions, executing database searches (Semantic Scholar, Scopus, arXiv), screening abstracts, full-text inclusion/exclusion, data extraction, and PRISMA flow generation.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">research</div>
+      <h4>puma-keshav-method</h4>
+      <p>Srinivasan Keshav's three-pass paper reading method applied to the PUMA vault: first pass (skim titles/abstracts for relevance), second pass (read with highlights), third pass (full critical analysis). Drives the literature note template.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">research</div>
+      <h4>puma-mit-student-method</h4>
+      <p>MIT AI Lab Working Paper WP316 method: how to identify the vision, steps, and news of a research contribution, and how to structure thesis chapters accordingly.</p>
+    </div>
+  </div>
+
+  <h4>Tools</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">tools</div>
+      <h4>puma-dataview</h4>
+      <p>Obsidian Dataview query syntax and conventions for generating dynamic tables of literature notes, experiment results, task statuses, and keyword indexes from vault frontmatter.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">tools</div>
+      <h4>puma-research-tools</h4>
+      <p>Reference for all research-discovery tools used in the project: Semantic Scholar, Consensus, Elicit, ResearchRabbit, ConnectedPapers, LitMaps, Undermind, Perplexity, NotebookLM — with usage patterns for each.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">tools</div>
+      <h4>puma-zotero</h4>
+      <p>Zotero integration conventions: how to sync Zotero citations with Obsidian, cite from the PUMA group library, and keep bibliographies in <code>60 - Resources/65 Bibliographies/</code> up to date.</p>
+    </div>
+  </div>
+
+  <h4>Vault Governance</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">vault</div>
+      <h4>puma-vault-architecture</h4>
+      <p>Defines the complete vault structure: folder semantics, Johnny Decimal address ranges, naming conventions for all note types, and the rules for creating new folders.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">vault</div>
+      <h4>puma-obsidian-governance</h4>
+      <p>Obsidian-specific rules: plugin configuration standards, frontmatter schema, CSS snippet guidelines, and the recommended plugin stack documented in <code>00 - Meta/Plugins-Config/Recommended-Plugins.md</code>.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">vault</div>
+      <h4>puma-rules</h4>
+      <p>The binding governance rules for all vault operations: what Claude must always do, what it must never do, and the conflict-resolution priority order (core &gt; vault &gt; domain skill).</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">vault</div>
+      <h4>puma-anti-patterns</h4>
+      <p>A catalogue of common mistakes to avoid: duplicate notes, flat file dumps, over-templating, ignoring GTD reviews, writing permanent notes without links, and prompting without RCOIF structure.</p>
+    </div>
+  </div>
+
+  <h4>Integration</h4>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">integration</div>
+      <h4>puma-obsidian-cli</h4>
+      <p>Instructions for using the Obsidian CLI to interact with the vault programmatically from Claude Code: creating notes, searching by frontmatter, running Dataview queries, and triggering plugin actions — all from the terminal.</p>
+    </div>
+  </div>
+
+  <h3>Obsidian-Skills Plugin</h3>
+  <p>A community marketplace of Claude skills for Obsidian, providing Claude with deep knowledge of Obsidian's internals without requiring manual context injection.</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">obsidian-skills</div>
+      <h4>obsidian-markdown</h4>
+      <p>Complete reference for Obsidian-flavoured Markdown: callout syntax, embed syntax (<code>![[note]]</code>), properties/frontmatter schema, internal link formats, and Obsidian-specific extensions beyond CommonMark.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">obsidian-skills</div>
+      <h4>obsidian-cli</h4>
+      <p>Full command reference for the Obsidian CLI tool: <code>obsidian create</code>, <code>obsidian search</code>, <code>obsidian open</code>, plugin reload, JavaScript injection, DOM inspection, and screenshot capture for a running Obsidian instance.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">obsidian-skills</div>
+      <h4>obsidian-bases</h4>
+      <p>Reference for Obsidian Bases (the native database feature): supported functions, query syntax, filtering operators, and how to build a Base from vault frontmatter without Dataview.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">obsidian-skills</div>
+      <h4>json-canvas</h4>
+      <p>JSON Canvas format specification with examples: how to create and edit Obsidian canvas files programmatically, node types, edge definitions, and embedding notes and media into canvases.</p>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">obsidian-skills</div>
+      <h4>defuddle</h4>
+      <p>Skill for the Defuddle library: extracting clean text from web pages for use as vault content, removing boilerplate, and feeding clean article text into literature notes automatically.</p>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
+
+<!-- ══════════════════════════════════════════════ VAULT STRUCTURE -->
+<section id="vault-structure">
+  <h2>6. Vault Structure (Johnny Decimal)</h2>
+
+  <table>
+    <thead>
+      <tr><th>Address</th><th>Folder</th><th>PARA Layer</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>00</code></td><td>00 - Meta</td><td>—</td><td>Vault configuration: templates, dashboards, plugin configs, CSS snippets. The operational backbone.</td></tr>
+      <tr><td><code>10</code></td><td>10 - Inbox</td><td>Inbox</td><td>Raw capture zone. Fleeting notes, quick captures, voice memos. Processed daily via GTD.</td></tr>
+      <tr><td><code>20</code></td><td>20 - Literature</td><td>Resources</td><td>All external source materials: papers, books, datasets, videos/podcasts, repos, tools, web resources, conferences.</td></tr>
+      <tr><td><code>20.1</code></td><td>20.1 Papers</td><td>—</td><td>Literature notes for academic papers, organized by research cluster (Agent-Architectures, AIOps-DevOps, LLM-Agents-General, PM-AI-Convergence, Scheduling-MAS, etc.).</td></tr>
+      <tr><td><code>20.2</code></td><td>20.2 Books</td><td>—</td><td>Literature notes for books. Key references and MOC Books.</td></tr>
+      <tr><td><code>20.3</code></td><td>20.3 Datasets</td><td>—</td><td>Dataset documentation: TAWOS, Jira SR, and others.</td></tr>
+      <tr><td><code>20.4</code></td><td>20.4 Videos-Podcasts</td><td>—</td><td>Video notes organized by topic: Agent architectures, Context Engineering, Dev Tools, MCP, RAG, SDD/BMAD, PM/Agile, Research, Observability, Local LLMs, and more.</td></tr>
+      <tr><td><code>20.5</code></td><td>20.5 Repos-Code</td><td>—</td><td>Notes on GitHub repositories and reference code for agent frameworks.</td></tr>
+      <tr><td><code>20.6</code></td><td>20.6 Tools</td><td>—</td><td>Tool surveys: AI assistants, datasets/benchmarks, dev environment, dev stack, RAG/VectorDB, research/bibliographic tools.</td></tr>
+      <tr><td><code>20.7</code></td><td>20.7 Blog-Web</td><td>—</td><td>Web resource notes and blog references.</td></tr>
+      <tr><td><code>20.8</code></td><td>20.8 Conferences</td><td>—</td><td>Conference notes and people/thinkers map.</td></tr>
+      <tr><td><code>30</code></td><td>30 - Permanent</td><td>Resources</td><td>Zettelkasten: atomic permanent notes (PN-), structure notes (ST-), concept clusters, methods, frameworks, results, sources, and persons.</td></tr>
+      <tr><td><code>40</code></td><td>40 - Projects</td><td>Projects</td><td>All active PUMA research work: thesis chapters, specs, experiments, sprint boards, and BMAD agent documentation.</td></tr>
+      <tr><td><code>50</code></td><td>50 - Areas</td><td>Areas</td><td>Ongoing responsibilities: research practice logs, Keshav reading log, SLR PRISMA log, writing tracker, code review log, carbon tracking, ethics review, Smart-PMO vision.</td></tr>
+      <tr><td><code>60</code></td><td>60 - Resources</td><td>Resources</td><td>Reusable assets: prompt templates (61), workflows (62), checklists (63), glossary (64), bibliographies (65), Johnny Decimal master index (66).</td></tr>
+      <tr><td><code>70</code></td><td>70 - Archive</td><td>Archive</td><td>Completed and deprecated material: old notes, completed projects, deprecated frameworks.</td></tr>
+      <tr><td><code>80</code></td><td>80 - MOC</td><td>—</td><td>Maps of Content and master index: topic maps for all major knowledge clusters plus the master index file.</td></tr>
+      <tr><td><code>90</code></td><td>90 - GTD</td><td>—</td><td>GTD system: active tasks, master projects list, someday/maybe/waiting queue.</td></tr>
+    </tbody>
+  </table>
+
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
+
+<!-- ══════════════════════════════════════════════ FULL INDEX -->
+<section id="full-index">
+  <h2>7. Full Index of Files <span class="count-badge">386 notes</span></h2>
+  <p class="dim">All files are listed as clickable relative links, organized by folder following the Johnny Decimal structure. Click any link to open the file.</p>
+
+  <!-- ROOT -->
+  <div class="index-section" id="idx-root">
+    <h3>Root</h3>
+    <ul class="file-list">
+      <li><a href="00%20-%20Home.md">00 - Home.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 00 META -->
+  <div class="index-section" id="idx-00">
+    <h3>00 — Meta <span class="count-badge">25 files</span></h3>
+
+    <h4>Dashboards</h4>
+    <ul class="file-list">
+      <li><a href="00%20-%20Meta/Dashboards/Dashboard-Experiment-Status.md">Dashboard-Experiment-Status.md</a></li>
+      <li><a href="00%20-%20Meta/Dashboards/Dashboard-Research-Progress.md">Dashboard-Research-Progress.md</a></li>
+    </ul>
+
+    <h4>Plugins-Config</h4>
+    <ul class="file-list">
+      <li><a href="00%20-%20Meta/Plugins-Config/Git-GitHub-Setup.md">Git-GitHub-Setup.md</a></li>
+      <li><a href="00%20-%20Meta/Plugins-Config/Recommended-Plugins.md">Recommended-Plugins.md</a></li>
+    </ul>
+
+    <h4>Snippets</h4>
+    <ul class="file-list">
+      <li><a href="00%20-%20Meta/Snippets/CSS-Snippets-Guide.md">CSS-Snippets-Guide.md</a></li>
+    </ul>
+
+    <h4>Templates</h4>
+    <ul class="file-list">
+      <li><a href="00%20-%20Meta/Templates/Daily%20Note%20Template.md">Daily Note Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Idea%20Template.md">Idea Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Log%20Template.md">Log Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/MOC%20Template.md">MOC Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Permanent%20Note%20Template.md">Permanent Note Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Private%20Note%20Template.md">Private Note Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Task%20Template.md">Task Template.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Book-Note.md">Template-Book-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Daily-Review.md">Template-Daily-Review.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Experiment-Note.md">Template-Experiment-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Keshav-ThreePass.md">Template-Keshav-ThreePass.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Literature-Note-Paper.md">Template-Literature-Note-Paper.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Permanent-Note.md">Template-Permanent-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Person-Note.md">Template-Person-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Prompt-Note.md">Template-Prompt-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Source-Note.md">Template-Source-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Sprint-Board.md">Template-Sprint-Board.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Structure-Note.md">Template-Structure-Note.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Video-Tool-Repo-Notes.md">Template-Video-Tool-Repo-Notes.md</a></li>
+      <li><a href="00%20-%20Meta/Templates/Template-Weekly-Review.md">Template-Weekly-Review.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 10 INBOX -->
+  <div class="index-section" id="idx-10">
+    <h3>10 — Inbox <span class="count-badge">4 files</span></h3>
+    <ul class="file-list">
+      <li><a href="10%20-%20Inbox/README-Inbox.md">README-Inbox.md</a></li>
+    </ul>
+
+    <h4>Fleeting-Notes</h4>
+    <ul class="file-list">
+      <li><a href="10%20-%20Inbox/Fleeting-Notes/Template-Fleeting-Note.md">Template-Fleeting-Note.md</a></li>
+      <li><a href="10%20-%20Inbox/Fleeting-Notes/Untitled%20Kanban.md">Untitled Kanban.md</a></li>
+    </ul>
+
+    <h4>Quick-Capture</h4>
+    <ul class="file-list">
+      <li><a href="10%20-%20Inbox/Quick-Capture/Quick-Capture-Log.md">Quick-Capture-Log.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 20 LITERATURE -->
+  <div class="index-section" id="idx-20">
+    <h3>20 — Literature <span class="count-badge">~160 files</span></h3>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/!%20MOC%20Library.md">! MOC Library.md</a></li>
+    </ul>
+
+    <h4>20.1 Papers</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/MOC%20Paper%20and%20Article%20Notes.md">MOC Paper and Article Notes.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/README-Papers.md">README-Papers.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LN-Angermeir-2025-Reproducibility.md">LN-Angermeir-2025-Reproducibility.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LN-Calikli-2025-RequestFormats.md">LN-Calikli-2025-RequestFormats.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg.md">LN-KeyPapers-CoGEE-Angermeir-Flyvbjerg.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LN-Spichkova-2025-CognitiveAgents.md">LN-Spichkova-2025-CognitiveAgents.md</a></li>
+    </ul>
+
+    <h5>Agent-Architectures</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Arora-2024-MASAI.md">LN-Arora-2024-MASAI.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-AuthenticatedWorkflows-2026.md">LN-AuthenticatedWorkflows-2026.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Chen-2024-RootCauseAnalysis.md">LN-Chen-2024-RootCauseAnalysis.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Flow-2025-AgenticWorkflow.md">LN-Flow-2025-AgenticWorkflow.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-GraphAgent-2024.md">LN-GraphAgent-2024.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-HAIF-2026-HumanAIIntegration.md">LN-HAIF-2026-HumanAIIntegration.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-HiveMind-2025-SwarmOptimization.md">LN-HiveMind-2025-SwarmOptimization.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Huang-2024-InternetOfAgents.md">LN-Huang-2024-InternetOfAgents.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-IntelligentSparkAgents-2024.md">LN-IntelligentSparkAgents-2024.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Jimenez-2023-SWEbench.md">LN-Jimenez-2023-SWEbench.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-MAGIS-2024-GitHubIssues.md">LN-MAGIS-2024-GitHubIssues.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Masterman-2024-AgentArchSurvey.md">LN-Masterman-2024-AgentArchSurvey.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Ning-2025-AgentTaxonomy.md">LN-Ning-2025-AgentTaxonomy.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-OrchestratingHumanAI-2025.md">LN-OrchestratingHumanAI-2025.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Tang-2025-LLMOrbit.md">LN-Tang-2025-LLMOrbit.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Wang-2024-OpenHands.md">LN-Wang-2024-OpenHands.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Yao-2023-TreeOfThoughts.md">LN-Yao-2023-TreeOfThoughts.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agent-Architectures/LN-Yu-2025-DynTaskMAS.md">LN-Yu-2025-DynTaskMAS.md</a></li>
+    </ul>
+
+    <h5>Agentic-Science</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agentic-Science/LN-Felin-2024-TheoryIsAllYouNeed.md">LN-Felin-2024-TheoryIsAllYouNeed.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Agentic-Science/LN-Zhang-2025-AgenticScienceSurvey.md">LN-Zhang-2025-AgenticScienceSurvey.md</a></li>
+    </ul>
+
+    <h5>AI-Knowledge-Generation</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-ArkaniHamed-2026-GluonAmplitudes.md">LN-ArkaniHamed-2026-GluonAmplitudes.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-Degrave-2022-PlasmaControl.md">LN-Degrave-2022-PlasmaControl.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-Jain-2023-GNoME-Materials.md">LN-Jain-2023-GNoME-Materials.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-Jumper-2021-AlphaFold.md">LN-Jumper-2021-AlphaFold.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-Klinger-2025-AIScience-SocialProblem.md">LN-Klinger-2025-AIScience-SocialProblem.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-Lam-2023-GraphCast.md">LN-Lam-2023-GraphCast.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AI-Knowledge-Generation/LN-Lu-2024-AIScientist.md">LN-Lu-2024-AIScientist.md</a></li>
+    </ul>
+
+    <h5>AIOps-DevOps</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/AIOps-DevOps/LN-Bruneliere-2022-AIDOaRt.md">LN-Bruneliere-2022-AIDOaRt.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AIOps-DevOps/LN-Chen-2025-AIOpsLab.md">LN-Chen-2025-AIOpsLab.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AIOps-DevOps/LN-Hou-2025-MCP-Security.md">LN-Hou-2025-MCP-Security.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/AIOps-DevOps/LN-Weichbroth-2025-EmotionsSurvey.md">LN-Weichbroth-2025-EmotionsSurvey.md</a></li>
+    </ul>
+
+    <h5>Effort-Estimation</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Effort-Estimation/README.md">README.md</a></li>
+    </ul>
+
+    <h5>LLM-Agents-General</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/README.md">README.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Gao-2024-AgentScope.md">LN-Gao-2024-AgentScope.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Hong-2023-MetaGPT.md">LN-Hong-2023-MetaGPT.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Mialon-2023-GAIA.md">LN-Mialon-2023-GAIA.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Packer-2023-MemGPT.md">LN-Packer-2023-MemGPT.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Qian-2023-ChatDev.md">LN-Qian-2023-ChatDev.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Talebirad-2023-MultiAgentSurvey.md">LN-Talebirad-2023-MultiAgentSurvey.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Wu-2023-AutoGen.md">LN-Wu-2023-AutoGen.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Yao-2022-ReAct.md">LN-Yao-2022-ReAct.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/LLM-Agents-General/LN-Zelikman-2024-QuietSTaR.md">LN-Zelikman-2024-QuietSTaR.md</a></li>
+    </ul>
+
+    <h5>PM-AI-Convergence</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/PM-AI-Convergence/README.md">README.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/PM-AI-Convergence/LN-Assalaarachchi-2026-AgenticSPM.md">LN-Assalaarachchi-2026-AgenticSPM.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/PM-AI-Convergence/LN-Cinkusz-2025-CognitiveAgentsAgilePM.md">LN-Cinkusz-2025-CognitiveAgentsAgilePM.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/PM-AI-Convergence/LN-Shao-2025-FutureOfWork.md">LN-Shao-2025-FutureOfWork.md</a></li>
+    </ul>
+
+    <h5>Reproducibility-SE</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Reproducibility-SE/README.md">README.md</a></li>
+    </ul>
+
+    <h5>Research-Methods</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Research-Methods/LN-MITAILab-WP316-HowToDoResearch.md">LN-MITAILab-WP316-HowToDoResearch.md</a></li>
+    </ul>
+
+    <h5>Scheduling-MAS</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Scheduling-MAS/LN-Li-2018-MultiProjectScheduling.md">LN-Li-2018-MultiProjectScheduling.md</a></li>
+      <li><a href="20%20-%20Literature/20.1%20Papers/Scheduling-MAS/LN-Sha-2026-MASchedulingRL.md">LN-Sha-2026-MASchedulingRL.md</a></li>
+    </ul>
+
+    <h5>Triage-Benchmarks</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.1%20Papers/Triage-Benchmarks/README.md">README.md</a></li>
+    </ul>
+
+    <h4>20.2 Books</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.2%20Books/LN-Books-KeyReferences.md">LN-Books-KeyReferences.md</a></li>
+      <li><a href="20%20-%20Literature/20.2%20Books/MOC%20Books.md">MOC Books.md</a></li>
+      <li><a href="20%20-%20Literature/20.2%20Books/Tasks%20of%20MOC%20Books.md">Tasks of MOC Books.md</a></li>
+    </ul>
+
+    <h4>20.3 Datasets</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.3%20Datasets/LN-Datasets-JiraSR-TAWOS.md">LN-Datasets-JiraSR-TAWOS.md</a></li>
+    </ul>
+
+    <h4>20.4 Videos-Podcasts</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/LN-Videos-Repos-Community.md">LN-Videos-Repos-Community.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/MOC%20Podcast%2C%20Video%20and%20Seminar.md">MOC Podcast, Video and Seminar.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/README-Videos.md">README-Videos.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/Tasks%20of%20MOC%20Podcast%2C%20Video%20and%20Seminar.md">Tasks of MOC Podcast, Video and Seminar.md</a></li>
+    </ul>
+
+    <h5>YouTube / Context-Engineering</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Context-Engineering/LN-Videos-Context-Engineering.md">LN-Videos-Context-Engineering.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Context-Engineering/VID-CE-001-Context-Engineering-Clearly-Explained.md">VID-CE-001 · Context Engineering Clearly Explained</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Context-Engineering/VID-CE-002-No-construyas-Agentes-IA-hasta-que-veas-esto.md">VID-CE-002 · No construyas Agentes IA hasta que veas esto</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Context-Engineering/VID-CE-003-Aprende-los-Agent-Skills-y-usalos-en-cualquie.md">VID-CE-003 · Aprende los Agent Skills</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Context-Engineering/VID-CE-004-Ingenier%C3%ADa-de-Contexto-La-Habilidad-CLAVE-pa.md">VID-CE-004 · Ingeniería de Contexto — La Habilidad CLAVE</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Context-Engineering/VID-CE-005-How-to-build-evaluate-and-refine-prompts-wi.md">VID-CE-005 · How to build, evaluate and refine prompts</a></li>
+    </ul>
+
+    <h5>YouTube / Dev-Tools-IDE</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Dev-Tools-IDE/LN-Videos-Dev-Tools-IDE.md">LN-Videos-Dev-Tools-IDE.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Dev-Tools-IDE/VID-DEV-001-Demo-De-Ticket-a-Pull-Request-en-30-minutos.md">VID-DEV-001 · Demo De Ticket a Pull Request en 30 minutos</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Dev-Tools-IDE/VID-DEV-002-12-Claude-Code-Features-Every-Engineer-Should.md">VID-DEV-002 · 12 Claude Code Features Every Engineer Should Know</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Dev-Tools-IDE/VID-DEV-003-AI-Testing-Series-Day-1--Test-AI-10x-Faster.md">VID-DEV-003 · AI Testing Series Day 1 — Test AI 10x Faster</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Dev-Tools-IDE/VID-DEV-004-How-I-use-Cursor--my-best-tips.md">VID-DEV-004 · How I use Cursor — my best tips</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Dev-Tools-IDE/VID-DEV-005-OpenCode-Probablemente-la-mejor-herramienta.md">VID-DEV-005 · OpenCode — Probablemente la mejor herramienta</a></li>
+    </ul>
+
+    <h5>YouTube / LLM-Agents-MultiAgent</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/LN-Videos-LLM-Agents-MultiAgent.md">LN-Videos-LLM-Agents-MultiAgent.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-001-Karpathy-Just-Replaced-RAG-With-Obsidian--Cl.md">VID-AGT-001 · Karpathy: Just Replaced RAG With Obsidian</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-002-12-Factor-Agents-Patterns-of-reliable-LLM-ap.md">VID-AGT-002 · 12 Factor Agents — Patterns of reliable LLM apps</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-003-3-Advanced-AI-agent-design-patterns.md">VID-AGT-003 · 3 Advanced AI agent design patterns</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-004-Flujos-de-trabajo-utilizando-Agentes---Andrew.md">VID-AGT-004 · Flujos de trabajo utilizando Agentes (Andrew Ng)</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-005-Building-AI-Agents-that-actually-work-Full-C.md">VID-AGT-005 · Building AI Agents that actually work</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-006-CrewAI-vs-AutoGen-vs-LangGraph-Features-Pro.md">VID-AGT-006 · CrewAI vs AutoGen vs LangGraph — Features Pros</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-007-Construyendo-IA-Fiable-Evals-Trazabilidad-y.md">VID-AGT-007 · Construyendo IA Fiable: Evals, Trazabilidad</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-008-Karpathys-Autoresearch-We-Achieved-Near-Hum.md">VID-AGT-008 · Karpathy's Autoresearch: Near Human Performance</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-009-The-only-AutoResearch-tutorial-youll-ever-ne.md">VID-AGT-009 · The only AutoResearch tutorial you'll ever need</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-010-No-construyas-Agentes-IA-hasta-que-veas-esto.md">VID-AGT-010 · No construyas Agentes IA hasta que veas esto</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-011-AI-Agent-Specialization-RAG-vs-Fine-tuning.md">VID-AGT-011 · AI Agent Specialization: RAG vs Fine-tuning</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-012-Orquestaci%C3%B3n-de-Agentes-Control-Determinista.md">VID-AGT-012 · Orquestación de Agentes — Control Determinista</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-013-Agentes-de-IA-y-LangGraph-c%C3%B3mo-las-empresas.md">VID-AGT-013 · Agentes de IA y LangGraph</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-014-Codelab-Construyendo-un-Sistema-Multi-Agente.md">VID-AGT-014 · Codelab: Construyendo un Sistema Multi-Agente</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/LLM-Agents-MultiAgent/VID-AGT-015-MAIA-Master-Class--De-NLP-a-la-IA-Ag%C3%A9ntica.md">VID-AGT-015 · MAIA Master Class: De NLP a la IA Agéntica</a></li>
+    </ul>
+
+    <h5>YouTube / Local-LLM-Ollama</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Local-LLM-Ollama/LN-Videos-Local-LLM-Ollama.md">LN-Videos-Local-LLM-Ollama.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Local-LLM-Ollama/VID-LOC-001-Mac-Mini-M4-b%C3%A1sico-para-LLM--Probamos-modelo.md">VID-LOC-001 · Mac Mini M4 básico para LLM</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Local-LLM-Ollama/VID-LOC-002-Ollama-vs-LM-Studio-vs-Docker-Models-vs-Llama.md">VID-LOC-002 · Ollama vs LM Studio vs Docker Models vs Llama</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Local-LLM-Ollama/VID-LOC-003-Run-a-Powerful-AI-Agent-Locally--Hermes-Agen.md">VID-LOC-003 · Run a Powerful AI Agent Locally (Hermes Agent)</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Local-LLM-Ollama/VID-LOC-004-DEJA-de-pagar-ChatGPT-Despliega-tu-propia-IA.md">VID-LOC-004 · DEJA de pagar ChatGPT — Despliega tu propia IA</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Local-LLM-Ollama/VID-LOC-005-Claude-Code-con-Modelos-Locales-Privacidad-y.md">VID-LOC-005 · Claude Code con Modelos Locales</a></li>
+    </ul>
+
+    <h5>YouTube / MCP-Protocols</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/MCP-Protocols/LN-Videos-MCP-Protocols.md">LN-Videos-MCP-Protocols.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/MCP-Protocols/VID-MCP-001-you-need-to-learn-MCP-RIGHT-NOW-Model-Cont.md">VID-MCP-001 · You need to learn MCP RIGHT NOW</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/MCP-Protocols/VID-MCP-002-How-to-implement-secure-MCP-patterns-Identit.md">VID-MCP-002 · How to implement secure MCP patterns</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/MCP-Protocols/VID-MCP-003-Learn-MCP-For-Beginners--Create-Our-First-M.md">VID-MCP-003 · Learn MCP For Beginners</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/MCP-Protocols/VID-MCP-004-Claude-MCP-has-Changed-AI-Forever--Heres-Wh.md">VID-MCP-004 · Claude MCP has Changed AI Forever</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/MCP-Protocols/VID-MCP-005-Build-ANYTHING-with-MCP-Servers--Coding-Tuto.md">VID-MCP-005 · Build ANYTHING with MCP Servers</a></li>
+    </ul>
+
+    <h5>YouTube / Miscellaneous</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Miscellaneous/LN-Videos-Miscellaneous.md">LN-Videos-Miscellaneous.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Miscellaneous/VID-MISC-001-A-Visual-Tour-of-Modern-LLM-Architectures.md">VID-MISC-001 · A Visual Tour of Modern LLM Architectures</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Miscellaneous/VID-MISC-002-Supabase-con-IA-CLI--MCP--Skills-Automat.md">VID-MISC-002 · Supabase con IA: CLI, MCP, Skills</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Miscellaneous/VID-MISC-003-Gemini-CLI--Googles-Free-Open-Source-Coding.md">VID-MISC-003 · Gemini CLI — Google's Free Open Source Coding</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Miscellaneous/VID-MISC-004-CrewAI-vs-AutoGen-vs-LangGraph--Features-Pr.md">VID-MISC-004 · CrewAI vs AutoGen vs LangGraph — Features</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Miscellaneous/VID-MISC-005-How-to-Permanently-Fix-Your-Forgetful-AI-Agen.md">VID-MISC-005 · How to Permanently Fix Your Forgetful AI Agent</a></li>
+    </ul>
+
+    <h5>YouTube / Observability-Testing</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Observability-Testing/LN-Videos-Observability-Testing.md">LN-Videos-Observability-Testing.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Observability-Testing/VID-OBS-001-Construyendo-IA-Fiable-Evals-Trazabilidad-y.md">VID-OBS-001 · Construyendo IA Fiable: Evals, Trazabilidad</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Observability-Testing/VID-OBS-002-Curso-evaluacion-LLM-con-Promptfoo--episodio.md">VID-OBS-002 · Curso evaluación LLM con Promptfoo</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Observability-Testing/VID-OBS-003-AI-Testing-Series-Day-2--Variable-Injection.md">VID-OBS-003 · AI Testing Series Day 2 — Variable Injection</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Observability-Testing/VID-OBS-004-Introduction-to-Observability-and-Prometheus.md">VID-OBS-004 · Introduction to Observability and Prometheus</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Observability-Testing/VID-OBS-005-E124--Creando-agentes-con-PydanticAI.md">VID-OBS-005 · E124: Creando agentes con PydanticAI</a></li>
+    </ul>
+
+    <h5>YouTube / PM-Agile-AI</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/PM-Agile-AI/LN-Videos-PM-Agile-AI.md">LN-Videos-PM-Agile-AI.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/PM-Agile-AI/VID-PM-001-El-viejo-Product-Manager-ha-muerto-bienvenid.md">VID-PM-001 · El viejo Product Manager ha muerto</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/PM-Agile-AI/VID-PM-002-El-cl%C3%A1sico-Sprint-hoy-es-demasiado-lento-las.md">VID-PM-002 · El clásico Sprint hoy es demasiado lento</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/PM-Agile-AI/VID-PM-003-I-Built-a-Second-Brain-That-Organises-Itself.md">VID-PM-003 · I Built a Second Brain That Organises Itself</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/PM-Agile-AI/VID-PM-004-La-IA-ha-Matado-a-Scrum-esto-es-lo-que-viene.md">VID-PM-004 · La IA ha Matado a Scrum</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/PM-Agile-AI/VID-PM-005-MI-INTELIGENCIA-y-ESTRATEGIA-se-disparan-grac.md">VID-PM-005 · MI INTELIGENCIA y ESTRATEGIA se disparan</a></li>
+    </ul>
+
+    <h5>YouTube / RAG-VectorDB</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/LN-Videos-RAG-VectorDB.md">LN-Videos-RAG-VectorDB.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-001-How-to-Build-a-Scalable-RAG-System-for-AI-App.md">VID-RAG-001 · How to Build a Scalable RAG System</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-002-Introducing-RAG-20-Agentic-RAG--Knowledge.md">VID-RAG-002 · Introducing RAG 2.0 — Agentic RAG</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-003-GraphRAG-LOCAL-Soluciona-PARA-SIEMPRE-los-pr.md">VID-RAG-003 · GraphRAG LOCAL — Soluciona PARA SIEMPRE los problemas</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-004-MISO-Master-Class--RAG-en-entornos-reales-y.md">VID-RAG-004 · MISO Master Class: RAG en entornos reales</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-005-The-Future-of-RAG-is-Agentic--Learn-this-Str.md">VID-RAG-005 · The Future of RAG is Agentic</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-006-LM-Studio--AnythingLLM-Process-Local-Docume.md">VID-RAG-006 · LM Studio + AnythingLLM — Process Local Documents</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-007-Por-qu%C3%A9-NO-uso-RAG-y-qu%C3%A9-uso-en-su-lugar.md">VID-RAG-007 · Por qué NO uso RAG y qué uso en su lugar</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-008-How-to-Build-Scalable-Agentic-RAG-with-Dify-a.md">VID-RAG-008 · How to Build Scalable Agentic RAG with Dify</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-009-RAG-20-Olvida-las-alucinaciones-de-tu-IA-pa.md">VID-RAG-009 · RAG 2.0 — Olvida las alucinaciones de tu IA</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/RAG-VectorDB/VID-RAG-010-Did-you-like-NotebookLM-Create-it-yourself-f.md">VID-RAG-010 · Did you like NotebookLM? Create it yourself</a></li>
+    </ul>
+
+    <h5>YouTube / Research-Literature</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/LN-Videos-Research-Literature.md">LN-Videos-Research-Literature.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/VID-RES-001-How-To-Do-A-Literature-Review-STRESS-FREE.md">VID-RES-001 · How To Do A Literature Review STRESS FREE</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/VID-RES-002-This-EMBARRASSING-AI-Generated-Paper-Exposed.md">VID-RES-002 · This EMBARRASSING AI Generated Paper Exposed</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/VID-RES-003-I-Compared-Every-Popular-AI-Literature-Review.md">VID-RES-003 · I Compared Every Popular AI Literature Review Tool</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/VID-RES-004-Ditch-The-Old-Google-Scholar--This-AI-Method.md">VID-RES-004 · Ditch The Old Google Scholar — This AI Method</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/VID-RES-005-How-To-Use-Research-Rabbit--Effortlessly-Exp.md">VID-RES-005 · How To Use Research Rabbit</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/Research-Literature/VID-RES-006-La-IA-que-todo-INVESTIGADOR-deber%C3%ADa-conocer.md">VID-RES-006 · La IA que todo INVESTIGADOR debería conocer</a></li>
+    </ul>
+
+    <h5>YouTube / SDD-Specs-BMAD</h5>
+    <ul class="file-list nested-list">
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/LN-Videos-SDD-Specs-BMAD.md">LN-Videos-SDD-Specs-BMAD.md</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-001-Spec-Driven-Development-in-the-Real-Worl.md">VID-SDD-001 · Spec-Driven Development in the Real World</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-002-The-Official-BMad-Method-Masterclass-Th.md">VID-SDD-002 · The Official BMad Method Masterclass</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-003-BMAD-Method-V6-PRD-Architecture-Agent.md">VID-SDD-003 · BMAD Method V6 — PRD Architecture Agent</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-004-AgentOS-VS-BMAD-VS-Spec-Kit-Which-AI-De.md">VID-SDD-004 · AgentOS VS BMAD VS Spec Kit</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-005-Plan-Specify-and-Implement-with-Spec-K.md">VID-SDD-005 · Plan, Specify and Implement with Spec Kit</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-006-OpenSpec-is-Insane-Spec-Driven-Developm.md">VID-SDD-006 · OpenSpec is Insane — Spec-Driven Development</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-007-BMAD-Method-Agent-Cheatsheet-From-Mary-.md">VID-SDD-007 · BMAD Method Agent Cheatsheet (From Mary)</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-008-Me-PIDIERON-que-muestre-C%C3%93MO-trabajo-con.md">VID-SDD-008 · Me PIDIERON que muestre CÓMO trabajo con AI</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-009-Gemini-CLI-Conductor-Spec-Driven-Develo.md">VID-SDD-009 · Gemini CLI Conductor — Spec-Driven Development</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-010-Spec-Driven-Development-for-AI-Agents-I.md">VID-SDD-010 · Spec-Driven Development for AI Agents</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-011-BMAD-vs-Open-Spec-vs-Spec-Kit-Which-AI-.md">VID-SDD-011 · BMAD vs Open Spec vs Spec Kit</a></li>
+      <li><a href="20%20-%20Literature/20.4%20Videos-Podcasts/YouTube/SDD-Specs-BMAD/VID-SDD-012-El-ECOSISTEMA-de-IA-que-le-falta-a-tu-ag.md">VID-SDD-012 · El ECOSISTEMA de IA que le falta a tu agente</a></li>
+    </ul>
+
+    <h4>20.5 Repos-Code</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.5%20Repos-Code/LN-Repos-AgentFrameworks.md">LN-Repos-AgentFrameworks.md</a></li>
+      <li><a href="20%20-%20Literature/20.5%20Repos-Code/LN-Repos-ReferenceCode.md">LN-Repos-ReferenceCode.md</a></li>
+      <li><a href="20%20-%20Literature/20.5%20Repos-Code/README-Repos.md">README-Repos.md</a></li>
+    </ul>
+
+    <h4>20.6 Tools</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-AI-Assistants-LLMs.md">LN-Tools-AI-Assistants-LLMs.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Datasets-Benchmarks.md">LN-Tools-Datasets-Benchmarks.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Dev-Environment.md">LN-Tools-Dev-Environment.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Dev-Stack.md">LN-Tools-Dev-Stack.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Documentation-Organisation.md">LN-Tools-Documentation-Organisation.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Ollama-ClaudeCode-OpenCode-BrowserOS.md">LN-Tools-Ollama-ClaudeCode-OpenCode-BrowserOS.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-RAG-VectorDB.md">LN-Tools-RAG-VectorDB.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Research-Bibliographic.md">LN-Tools-Research-Bibliographic.md</a></li>
+      <li><a href="20%20-%20Literature/20.6%20Tools/LN-Tools-Research-Discovery.md">LN-Tools-Research-Discovery.md</a></li>
+    </ul>
+
+    <h4>20.7 Blog-Web</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.7%20Blog-Web/LN-Web-Resources.md">LN-Web-Resources.md</a></li>
+    </ul>
+
+    <h4>20.8 Conferences</h4>
+    <ul class="file-list">
+      <li><a href="20%20-%20Literature/20.8%20Conferences/LN-Web-Resources.md">LN-Web-Resources.md</a></li>
+      <li><a href="20%20-%20Literature/20.8%20Conferences/MOC%20People%20and%20Thinkers.md">MOC People and Thinkers.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 30 PERMANENT -->
+  <div class="index-section" id="idx-30">
+    <h3>30 — Permanent (Zettelkasten) <span class="count-badge">35 files</span></h3>
+
+    <h4>30 Zettelkasten-Hub</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/30%20Zettelkasten-Hub/ST-Prompting-Strategies.md">ST-Prompting-Strategies.md</a></li>
+      <li><a href="30%20-%20Permanent/30%20Zettelkasten-Hub/ST-Reproducibility-Cluster.md">ST-Reproducibility-Cluster.md</a></li>
+      <li><a href="30%20-%20Permanent/30%20Zettelkasten-Hub/ZK-Hub-PUMA.md">ZK-Hub-PUMA.md</a></li>
+    </ul>
+
+    <h4>31 Concepts</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/31%20Concepts/README-Concepts.md">README-Concepts.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-ActiveReading-CognitivePractice.md">PN-ActiveReading-CognitivePractice.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-Agentic-Science-Paradigm.md">PN-Agentic-Science-Paradigm.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-AI-Scientific-Knowledge-Generation.md">PN-AI-Scientific-Knowledge-Generation.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-CoT-FewShot-Prompting.md">PN-CoT-FewShot-Prompting.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-IssueTriage-StoryPoints.md">PN-IssueTriage-StoryPoints.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-KeyConcepts-Agents-Reproducibility-RedTeam.md">PN-KeyConcepts-Agents-Reproducibility-RedTeam.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-LLM-Local-vs-Cloud.md">PN-LLM-Local-vs-Cloud.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-MultiAgent-ArchitecturePatterns.md">PN-MultiAgent-ArchitecturePatterns.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-PUMA-within-AgenticScience-Trajectory.md">PN-PUMA-within-AgenticScience-Trajectory.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-RAG-Embeddings-VectorDB.md">PN-RAG-Embeddings-VectorDB.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-ReAct-AgentPattern.md">PN-ReAct-AgentPattern.md</a></li>
+      <li><a href="30%20-%20Permanent/31%20Concepts/PN-ToolSelection-PUMA.md">PN-ToolSelection-PUMA.md</a></li>
+    </ul>
+
+    <h4>32 Methods</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/32%20Methods/README-Methods.md">README-Methods.md</a></li>
+      <li><a href="30%20-%20Permanent/32%20Methods/PN-DSR-SLR-Methods.md">PN-DSR-SLR-Methods.md</a></li>
+      <li><a href="30%20-%20Permanent/32%20Methods/PN-Wilcoxon-FINER-Cornell-PRISMA.md">PN-Wilcoxon-FINER-Cornell-PRISMA.md</a></li>
+    </ul>
+
+    <h4>33 Frameworks</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/33%20Frameworks/README-Frameworks-Results-Hypotheses.md">README-Frameworks-Results-Hypotheses.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-AMI-DRCA-IIPR-Frameworks.md">PN-AMI-DRCA-IIPR-Frameworks.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-EGI-Framework.md">PN-EGI-Framework.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-MIT-Student-Method-Complete.md">PN-MIT-Student-Method-Complete.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-MIT-Student-Method.md">PN-MIT-Student-Method.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-PARA-GTD-Zettelkasten.md">PN-PARA-GTD-Zettelkasten.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-RCOIF-Framework.md">PN-RCOIF-Framework.md</a></li>
+      <li><a href="30%20-%20Permanent/33%20Frameworks/PN-SDD-Framework.md">PN-SDD-Framework.md</a></li>
+    </ul>
+
+    <h4>34 Results</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/34%20Results/RES-Results-Placeholders.md">RES-Results-Placeholders.md</a></li>
+    </ul>
+
+    <h4>36 Sources</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/36%20Sources/SRC-Keshav-2007-HowToReadPaper.md">SRC-Keshav-2007-HowToReadPaper.md</a></li>
+      <li><a href="30%20-%20Permanent/36%20Sources/SRC-MITAILab-WP316.md">SRC-MITAILab-WP316.md</a></li>
+    </ul>
+
+    <h4>37 Persons</h4>
+    <ul class="file-list">
+      <li><a href="30%20-%20Permanent/37%20Persons/PER-Assalaarachchi-Nuwan.md">PER-Assalaarachchi-Nuwan.md</a></li>
+      <li><a href="30%20-%20Permanent/37%20Persons/PER-Flyvbjerg-Bent.md">PER-Flyvbjerg-Bent.md</a></li>
+      <li><a href="30%20-%20Permanent/37%20Persons/PER-Hong-Sirui-MetaGPT.md">PER-Hong-Sirui-MetaGPT.md</a></li>
+      <li><a href="30%20-%20Permanent/37%20Persons/PER-Keshav-Srinivasan.md">PER-Keshav-Srinivasan.md</a></li>
+      <li><a href="30%20-%20Permanent/37%20Persons/PER-Yao-Shunyu.md">PER-Yao-Shunyu.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 40 PROJECTS -->
+  <div class="index-section" id="idx-40">
+    <h3>40 — Projects <span class="count-badge">19 files</span></h3>
+
+    <h4>41.1 Introduction</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.1%20Introduction/PR-PUMA-Ch1-Introduction.md">PR-PUMA-Ch1-Introduction.md</a></li>
+    </ul>
+
+    <h4>41.2 Literature-Review</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.2%20Literature-Review/PR-PUMA-Ch2-Ch3-Ch4-Ch5.md">PR-PUMA-Ch2-Ch3-Ch4-Ch5.md</a></li>
+    </ul>
+
+    <h4>41.3 Methods</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.3%20Methods/PR-PUMA-Ch3-Methods.md">PR-PUMA-Ch3-Methods.md</a></li>
+    </ul>
+
+    <h4>41.4 Results</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.4%20Results/PR-PUMA-Ch4-Results.md">PR-PUMA-Ch4-Results.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.4%20Results/Stage1-Triage/README.md">Stage1-Triage / README.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.4%20Results/Stage2-Estimation/README.md">Stage2-Estimation / README.md</a></li>
+    </ul>
+
+    <h4>41.5 Discussion</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.5%20Discussion/PR-PUMA-Ch5-Discussion.md">PR-PUMA-Ch5-Discussion.md</a></li>
+    </ul>
+
+    <h4>41.6 Specs</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.6%20Specs/SP-Architecture-v1.md">SP-Architecture-v1.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.6%20Specs/SP-Estimation-Dataset-Specs.md">SP-Estimation-Dataset-Specs.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.6%20Specs/SP-PUMA-Constitution.md">SP-PUMA-Constitution.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.6%20Specs/SP-Triage-Agent-v1.md">SP-Triage-Agent-v1.md</a></li>
+    </ul>
+
+    <h4>41.7 Experiments</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.7%20Experiments/EX-Hypotheses-H1-H2.md">EX-Hypotheses-H1-H2.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.7%20Experiments/EX-Stages-Overview.md">EX-Stages-Overview.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.7%20Experiments/Stage1-Triage/README.md">Stage1-Triage / README.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.7%20Experiments/Stage2-Estimation/README.md">Stage2-Estimation / README.md</a></li>
+    </ul>
+
+    <h4>41.8 Sprint-Boards</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.8%20Sprint-Boards/Sprint-02.md">Sprint-02.md</a></li>
+    </ul>
+
+    <h4>41.9 BMAD-Agents</h4>
+    <ul class="file-list">
+      <li><a href="40%20-%20Projects/PUMA/41.9%20BMAD-Agents/BMAD-Agent-Roster.md">BMAD-Agent-Roster.md</a></li>
+      <li><a href="40%20-%20Projects/PUMA/41.9%20BMAD-Agents/BMAD-PRD-PUMA.md">BMAD-PRD-PUMA.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 50 AREAS -->
+  <div class="index-section" id="idx-50">
+    <h3>50 — Areas <span class="count-badge">10 files</span></h3>
+
+    <h4>51 Research</h4>
+    <ul class="file-list">
+      <li><a href="50%20-%20Areas/51%20Research/AI-Use-Log.md">AI-Use-Log.md</a></li>
+      <li><a href="50%20-%20Areas/51%20Research/AI-Use-Log-PEC2-Entry.md">AI-Use-Log-PEC2-Entry.md</a></li>
+      <li><a href="50%20-%20Areas/51%20Research/Keshav-ThreePass/Keshav-Reading-Log.md">Keshav-Reading-Log.md</a></li>
+      <li><a href="50%20-%20Areas/51%20Research/MIT-AILab-Method/MIT-AILab-Reading-Practice.md">MIT-AILab-Reading-Practice.md</a></li>
+      <li><a href="50%20-%20Areas/51%20Research/SLR-PRISMA/PRISMA-Log.md">PRISMA-Log.md</a></li>
+    </ul>
+
+    <h4>52 Writing</h4>
+    <ul class="file-list">
+      <li><a href="50%20-%20Areas/52%20Writing/Writing-Progress-Tracker.md">Writing-Progress-Tracker.md</a></li>
+    </ul>
+
+    <h4>53 Code-Dev</h4>
+    <ul class="file-list">
+      <li><a href="50%20-%20Areas/53%20Code-Dev/Code-Review-Log.md">Code-Review-Log.md</a></li>
+    </ul>
+
+    <h4>54 Sustainability</h4>
+    <ul class="file-list">
+      <li><a href="50%20-%20Areas/54%20Sustainability/Carbon-Tracking-Log.md">Carbon-Tracking-Log.md</a></li>
+    </ul>
+
+    <h4>55 Ethics</h4>
+    <ul class="file-list">
+      <li><a href="50%20-%20Areas/55%20Ethics/Ethics-Review-Log.md">Ethics-Review-Log.md</a></li>
+    </ul>
+
+    <h4>56 Smart-PMO</h4>
+    <ul class="file-list">
+      <li><a href="50%20-%20Areas/56%20Smart-PMO/Smart-PMO-Vision.md">Smart-PMO-Vision.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 60 RESOURCES -->
+  <div class="index-section" id="idx-60">
+    <h3>60 — Resources <span class="count-badge">~60 files</span></h3>
+
+    <h4>61 Prompts — General</h4>
+    <ul class="file-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/PT-PUMA-Experiment-Prompts.md">PT-PUMA-Experiment-Prompts.md</a></li>
+    </ul>
+
+    <h5>61.1 LLM-Tools</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/61.1%20LLM-Tools/PT-Advanced-Prompts-IIPR-Anchoring-AgentOS.md">PT-Advanced-Prompts-IIPR-Anchoring-AgentOS.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/61.1%20LLM-Tools/PT-Claude-RCOIF-Research.md">PT-Claude-RCOIF-Research.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/61.1%20LLM-Tools/PT-LLM-Tools-All-Prompts.md">PT-LLM-Tools-All-Prompts.md</a></li>
+    </ul>
+
+    <h5>61.2 Research-Tools</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/61.2%20Research-Tools/PT-Research-Discovery-Prompts.md">PT-Research-Discovery-Prompts.md</a></li>
+    </ul>
+
+    <h5>61.3 Dev-Tools</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/61.3%20Dev-Tools/PT-DevTools-Prompts.md">PT-DevTools-Prompts.md</a></li>
+    </ul>
+
+    <h5>61.5 BMAD-Prompts</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/61.5%20BMAD-Prompts/PT-BMAD-Agent-Prompts.md">PT-BMAD-Agent-Prompts.md</a></li>
+    </ul>
+
+    <h5>Methodologies</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Methodologies/PT-METH-001-PRISMA-Protocol.md">PT-METH-001-PRISMA-Protocol.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Methodologies/PT-METH-002-Keshav-ThreePass.md">PT-METH-002-Keshav-ThreePass.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Methodologies/PT-METH-003-DSR-ArtifactDesign.md">PT-METH-003-DSR-ArtifactDesign.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Methodologies/PT-METH-004-GroundedTheory-QualitativeAnalysis.md">PT-METH-004-GroundedTheory-QualitativeAnalysis.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 01 Literature-Exploration</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-001-SemanticScholar-CoreSearch.md">PT-P1S1-001-SemanticScholar-CoreSearch.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-002-SemanticScholar-TaskSpecific.md">PT-P1S1-002-SemanticScholar-TaskSpecific.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-003-GoogleScholar-BroadSweep.md">PT-P1S1-003-GoogleScholar-BroadSweep.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-004-arXiv-FrontierScan.md">PT-P1S1-004-arXiv-FrontierScan.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-005-Consensus-EvidenceSearch.md">PT-P1S1-005-Consensus-EvidenceSearch.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-006-Undermind-HighPrecision.md">PT-P1S1-006-Undermind-HighPrecision.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-007-ResearchRabbit-SeedExpansion.md">PT-P1S1-007-ResearchRabbit-SeedExpansion.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/01-Literature-Exploration/PT-P1S1-008-Elsevier-Scopus-Search.md">PT-P1S1-008-Elsevier-Scopus-Search.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 02 Scientific-Mapping</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/02-Scientific-Mapping/PT-P1S2-001-ConnectedPapers-CitationMap.md">PT-P1S2-001-ConnectedPapers-CitationMap.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/02-Scientific-Mapping/PT-P1S2-002-LitMaps-TemporalEvolution.md">PT-P1S2-002-LitMaps-TemporalEvolution.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/02-Scientific-Mapping/PT-P1S2-003-Claude-LiteratureSynthesis-RCOIF.md">PT-P1S2-003-Claude-LiteratureSynthesis-RCOIF.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/02-Scientific-Mapping/PT-P1S2-004-Perplexity-FastEvidenceMap.md">PT-P1S2-004-Perplexity-FastEvidenceMap.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/02-Scientific-Mapping/PT-P1S2-005-Gemini-BroadCorpusSynthesis.md">PT-P1S2-005-Gemini-BroadCorpusSynthesis.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 03 Structured-Extraction</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/03-Structured-Extraction/PT-P1S3-001-Elicit-DataExtraction.md">PT-P1S3-001-Elicit-DataExtraction.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/03-Structured-Extraction/PT-P1S3-002-NotebookLM-CorpusExtraction.md">PT-P1S3-002-NotebookLM-CorpusExtraction.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/03-Structured-Extraction/PT-P1S3-003-Zotero-BibliographicCuration.md">PT-P1S3-003-Zotero-BibliographicCuration.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/03-Structured-Extraction/PT-P1S3-004-Researcher-MonitoringFeed.md">PT-P1S3-004-Researcher-MonitoringFeed.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 04 Conceptual-Synthesis</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/04-Conceptual-Synthesis/PT-P1S4-001-Claude-TheoreticalFramework.md">PT-P1S4-001-Claude-TheoreticalFramework.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/04-Conceptual-Synthesis/PT-P1S4-002-ChatGPT-ZettelkastenNotes.md">PT-P1S4-002-ChatGPT-ZettelkastenNotes.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/04-Conceptual-Synthesis/PT-P1S4-003-Gemini-ConceptualModel.md">PT-P1S4-003-Gemini-ConceptualModel.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 05 Hypothesis-Generation</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/05-Hypothesis-Generation/PT-P1S5-001-Claude-HypothesisFormulation.md">PT-P1S5-001-Claude-HypothesisFormulation.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/05-Hypothesis-Generation/PT-P1S5-002-ChatGPT-RivalHypotheses.md">PT-P1S5-002-ChatGPT-RivalHypotheses.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 06 Experimental-Design</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/06-Experimental-Design/PT-P1S6-001-Claude-ExperimentProtocol.md">PT-P1S6-001-Claude-ExperimentProtocol.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/06-Experimental-Design/PT-P1S6-002-ChatGPT-DatasetPreparation.md">PT-P1S6-002-ChatGPT-DatasetPreparation.md</a></li>
+    </ul>
+
+    <h5>Phase 1 — Research / 07 Critical-Review</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/07-Critical-Review/PT-P1S7-001-Claude-PeerReviewSimulation.md">PT-P1S7-001-Claude-PeerReviewSimulation.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/07-Critical-Review/PT-P1S7-002-Grok-AdversarialCritique.md">PT-P1S7-002-Grok-AdversarialCritique.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase1-Research/07-Critical-Review/PT-P1S7-003-Perplexity-ClaimVerification.md">PT-P1S7-003-Perplexity-ClaimVerification.md</a></li>
+    </ul>
+
+    <h5>Phase 2 — Development</h5>
+    <ul class="file-list nested-list">
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase2-Development/PT-P2-001-Claude-ArchitectureDesign-SDD.md">PT-P2-001-Claude-ArchitectureDesign-SDD.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase2-Development/PT-P2-002-CursorClaudeCode-Implementation.md">PT-P2-002-CursorClaudeCode-Implementation.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase2-Development/PT-P2-003-PromptEngineering-AgentPrompts.md">PT-P2-003-PromptEngineering-AgentPrompts.md</a></li>
+      <li><a href="60%20-%20Resources/61%20Prompts/Phase2-Development/PT-P2-004-AcademicWriting-ThesisChapters.md">PT-P2-004-AcademicWriting-ThesisChapters.md</a></li>
+    </ul>
+
+    <h4>62 Workflows</h4>
+    <ul class="file-list">
+      <li><a href="60%20-%20Resources/62%20Workflows/WF-MIT-AILab-Reading-Workflow.md">WF-MIT-AILab-Reading-Workflow.md</a></li>
+      <li><a href="60%20-%20Resources/62%20Workflows/WF-Research-Experiment-Routines.md">WF-Research-Experiment-Routines.md</a></li>
+      <li><a href="60%20-%20Resources/62%20Workflows/WF-SLR-Pipeline.md">WF-SLR-Pipeline.md</a></li>
+    </ul>
+
+    <h4>63 Checklists</h4>
+    <ul class="file-list">
+      <li><a href="60%20-%20Resources/63%20Checklists/CL-Quality-Checklists.md">CL-Quality-Checklists.md</a></li>
+    </ul>
+
+    <h4>64 Glossary</h4>
+    <ul class="file-list">
+      <li><a href="60%20-%20Resources/64%20Glossary/Glossary-Master.md">Glossary-Master.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/Glossary-Supplement.md">Glossary-Supplement.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/Glossary-Tools.md">Glossary-Tools.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/KW-Category1-AI-Agents-Swarm-Intelligence.md">KW-Category1-AI-Agents-Swarm-Intelligence.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/KW-Category2-Project-Management-Smart-PMO.md">KW-Category2-Project-Management-Smart-PMO.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/KW-Category3-Research-Methodology-Academic-Rigor.md">KW-Category3-Research-Methodology-Academic-Rigor.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/KW-Category4-Data-Engineering-Technical-Stack.md">KW-Category4-Data-Engineering-Technical-Stack.md</a></li>
+      <li><a href="60%20-%20Resources/64%20Glossary/KW-Category5-Evaluation-Ethics-Sustainability.md">KW-Category5-Evaluation-Ethics-Sustainability.md</a></li>
+    </ul>
+
+    <h4>65 Bibliographies</h4>
+    <ul class="file-list">
+      <li><a href="60%20-%20Resources/65%20Bibliographies/BIB-Master-APA7.md">BIB-Master-APA7.md</a></li>
+      <li><a href="60%20-%20Resources/65%20Bibliographies/BIB-Supplement.md">BIB-Supplement.md</a></li>
+      <li><a href="60%20-%20Resources/65%20Bibliographies/BIB-Supplement-PEC2-AIKnowledge.md">BIB-Supplement-PEC2-AIKnowledge.md</a></li>
+    </ul>
+
+    <h4>66 Johnny-Decimal-Index</h4>
+    <ul class="file-list">
+      <li><a href="60%20-%20Resources/66%20Johnny-Decimal-Index/JD-Master-Index.md">JD-Master-Index.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 70 ARCHIVE -->
+  <div class="index-section" id="idx-70">
+    <h3>70 — Archive <span class="count-badge">3 files</span></h3>
+    <ul class="file-list">
+      <li><a href="70%20-%20Archive/71%20Old-Notes/README.md">71 Old-Notes / README.md</a></li>
+      <li><a href="70%20-%20Archive/72%20Completed/README.md">72 Completed / README.md</a></li>
+      <li><a href="70%20-%20Archive/73%20Deprecated/README.md">73 Deprecated / README.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 80 MOC -->
+  <div class="index-section" id="idx-80">
+    <h3>80 — MOC (Maps of Content) <span class="count-badge">12 files</span></h3>
+
+    <h4>81 Topic-Maps</h4>
+    <ul class="file-list">
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-AI-Knowledge-Generation.md">MOC-AI-Knowledge-Generation.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Keywords-Master.md">MOC-Keywords-Master.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Literature-Review.md">MOC-Literature-Review.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-LLM-Benchmarks-PM-AI.md">MOC-LLM-Benchmarks-PM-AI.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Methods-Frameworks.md">MOC-Methods-Frameworks.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Prompts-Library.md">MOC-Prompts-Library.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-PUMA-Master.md">MOC-PUMA-Master.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Research-Pipeline.md">MOC-Research-Pipeline.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Tools-Stack.md">MOC-Tools-Stack.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Videos-Library.md">MOC-Videos-Library.md</a></li>
+      <li><a href="80%20-%20MOC/81%20Topic-Maps/MOC-Zettelkasten-PUMA.md">MOC-Zettelkasten-PUMA.md</a></li>
+    </ul>
+
+    <h4>82 Index</h4>
+    <ul class="file-list">
+      <li><a href="80%20-%20MOC/82%20Index/Master-Index.md">Master-Index.md</a></li>
+    </ul>
+  </div>
+
+  <!-- 90 GTD -->
+  <div class="index-section" id="idx-90">
+    <h3>90 — GTD <span class="count-badge">3 files</span></h3>
+    <ul class="file-list">
+      <li><a href="90%20-%20GTD/91%20Tasks/TASKS-Active.md">TASKS-Active.md</a></li>
+      <li><a href="90%20-%20GTD/92%20Projects-List/PROJECTS-Master.md">PROJECTS-Master.md</a></li>
+      <li><a href="90%20-%20GTD/93%20Someday-Maybe/SOMEDAY-WAITING-PROJECTS.md">SOMEDAY-WAITING-PROJECTS.md</a></li>
+    </ul>
+  </div>
+
+  <!-- .claude -->
+  <div class="index-section" id="idx-claude">
+    <h3>.claude — AI Skills &amp; Governance <span class="count-badge">45 files</span></h3>
+
+    <h4>.claude / puma / core</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/core/puma-core.md">puma-core.md</a></li>
+      <li><a href=".claude/puma/core/puma-orchestrator.md">puma-orchestrator.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / development</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/development/puma-agent-design.md">puma-agent-design.md</a></li>
+      <li><a href=".claude/puma/development/puma-agile.md">puma-agile.md</a></li>
+      <li><a href=".claude/puma/development/puma-bmad.md">puma-bmad.md</a></li>
+      <li><a href=".claude/puma/development/puma-cdd.md">puma-cdd.md</a></li>
+      <li><a href=".claude/puma/development/puma-experiment.md">puma-experiment.md</a></li>
+      <li><a href=".claude/puma/development/puma-openspec.md">puma-openspec.md</a></li>
+      <li><a href=".claude/puma/development/puma-sdd.md">puma-sdd.md</a></li>
+      <li><a href=".claude/puma/development/puma-spec-kit.md">puma-spec-kit.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / integration</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/integration/puma-obsidian-cli.md">puma-obsidian-cli.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / knowledge</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/knowledge/puma-moc.md">puma-moc.md</a></li>
+      <li><a href=".claude/puma/knowledge/puma-zettelkasten.md">puma-zettelkasten.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / meta</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/meta/puma-anti-patterns.md">puma-anti-patterns.md</a></li>
+      <li><a href=".claude/puma/meta/puma-rules.md">puma-rules.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / prompting</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/prompting/puma-advanced-prompt.md">puma-advanced-prompt.md</a></li>
+      <li><a href=".claude/puma/prompting/puma-cot.md">puma-cot.md</a></li>
+      <li><a href=".claude/puma/prompting/puma-prompting.md">puma-prompting.md</a></li>
+      <li><a href=".claude/puma/prompting/puma-rcoif.md">puma-rcoif.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / research</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/research/puma-keshav-method.md">puma-keshav-method.md</a></li>
+      <li><a href=".claude/puma/research/puma-literature-review.md">puma-literature-review.md</a></li>
+      <li><a href=".claude/puma/research/puma-mit-student-method.md">puma-mit-student-method.md</a></li>
+      <li><a href=".claude/puma/research/puma-research.md">puma-research.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / tools</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/tools/puma-dataview.md">puma-dataview.md</a></li>
+      <li><a href=".claude/puma/tools/puma-research-tools.md">puma-research-tools.md</a></li>
+      <li><a href=".claude/puma/tools/puma-zotero.md">puma-zotero.md</a></li>
+    </ul>
+
+    <h4>.claude / puma / vault</h4>
+    <ul class="file-list">
+      <li><a href=".claude/puma/vault/puma-anti-patterns.md">puma-anti-patterns.md</a></li>
+      <li><a href=".claude/puma/vault/puma-obsidian-governance.md">puma-obsidian-governance.md</a></li>
+      <li><a href=".claude/puma/vault/puma-rules.md">puma-rules.md</a></li>
+      <li><a href=".claude/puma/vault/puma-vault-architecture.md">puma-vault-architecture.md</a></li>
+    </ul>
+
+    <h4>.claude / obsidian-skills</h4>
+    <ul class="file-list">
+      <li><a href=".claude/obsidian-skills/README.md">README.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/defuddle/SKILL.md">skills / defuddle / SKILL.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/json-canvas/SKILL.md">skills / json-canvas / SKILL.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/json-canvas/references/EXAMPLES.md">skills / json-canvas / references / EXAMPLES.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-bases/SKILL.md">skills / obsidian-bases / SKILL.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-bases/references/FUNCTIONS_REFERENCE.md">skills / obsidian-bases / references / FUNCTIONS_REFERENCE.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-cli/SKILL.md">skills / obsidian-cli / SKILL.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-markdown/SKILL.md">skills / obsidian-markdown / SKILL.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-markdown/references/CALLOUTS.md">skills / obsidian-markdown / references / CALLOUTS.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-markdown/references/EMBEDS.md">skills / obsidian-markdown / references / EMBEDS.md</a></li>
+      <li><a href=".claude/obsidian-skills/skills/obsidian-markdown/references/PROPERTIES.md">skills / obsidian-markdown / references / PROPERTIES.md</a></li>
+    </ul>
+  </div>
+
+  <a href="#top" class="back-top">↑ back to top</a>
+</section>
+
+<!-- ══════════════════════════════════════════════ FOOTER -->
+<footer>
+  <p>PUMA Research Vault &nbsp;·&nbsp; Built with Obsidian, Claude Code &amp; GitHub Pages &nbsp;·&nbsp; Last updated: 2026 &nbsp;·&nbsp; License: MIT</p>
+</footer>
+
+</div>
 </body>
 </html>
-
